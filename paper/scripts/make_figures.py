@@ -183,12 +183,24 @@ def mechanism8_figure():
 def saft_kde_figure():
     """SAFT's own diagnostic (their App. B): density of the spectral score by human label, on our 8B pool, layers 15 and 32, k = 1."""
     D = f"{W}/selections_e3/lambda0.25"; pool = json.load(open(f"{D}/pool.json")); unsafe = np.array([not r["is_safe"] for r in pool])
-    req = np.array(json.load(open(f"{D}/scores.json"))["harmful_request"]); Z = np.load(f"{D}/saft_embeddings.npz")
-    pool05, unsafe05, req05, _ = _pool(); Z05 = np.load(f"{W}/results/saft05_embeddings.npz")["layer"]
-    panels = [("8B, layer 15", Z["layer15"], unsafe, req), ("8B, layer 32", Z["layer32"], unsafe, req), ("0.5B, layer 12", Z05, unsafe05, req05)]
+    req = np.array(json.load(open(f"{D}/scores.json"))["harmful_request"]); pool05, unsafe05, req05, _ = _pool()
+    # The panels need only the first principal component's squared projection, one number per example.
+    # The embedding matrices it comes from are hundreds of megabytes and are not distributed, so the
+    # scores are cached here: computed from the embeddings when they are present, read back otherwise.
+    cache = f"{W}/results/saft_kde_scores.json"
+    emb = [f"{D}/saft_embeddings.npz", f"{W}/results/saft05_embeddings.npz"]
+    if all(os.path.exists(e) for e in emb):
+        Z = np.load(emb[0]); Z05 = np.load(emb[1])["layer"]
+        def _score(Zl):
+            Zc = Zl - Zl.mean(0, keepdims=True); _, _, Vt = np.linalg.svd(Zc, full_matrices=False)
+            return ((Zc @ Vt[0]) ** 2)
+        scores = [_score(Z["layer15"]), _score(Z["layer32"]), _score(Z05)]
+        json.dump([s.tolist() for s in scores], open(cache, "w"))
+    else:
+        scores = [np.array(s) for s in json.load(open(cache))]
+    panels = [("8B, layer 15", scores[0], unsafe, req), ("8B, layer 32", scores[1], unsafe, req), ("0.5B, layer 12", scores[2], unsafe05, req05)]
     fig, ax = plt.subplots(1, 3, figsize=(6.4, 2.1), sharey=False)
-    for a, (title, Zl, uns, rq) in zip(ax, panels):
-        Zc = Zl - Zl.mean(0, keepdims=True); _, _, Vt = np.linalg.svd(Zc, full_matrices=False); sc = (Zc @ Vt[0]) ** 2
+    for a, (title, sc, uns, rq) in zip(ax, panels):
         xs = np.linspace(0, np.quantile(sc, 0.99), 200); bw = 0.06 * xs[-1]
         for name, m, c in (("human-harmful", uns, GRP["harmful"]), ("safe, benign prompt", ~uns & ~rq, GRP["benign"]), ("safe, harmful prompt", ~uns & rq, GRP["demo"])):
             d = np.exp(-0.5 * ((xs[:, None] - sc[m][None]) / bw) ** 2).sum(1) / (m.sum() * bw); a.plot(xs, d, color=c, lw=1.3, label=name)
