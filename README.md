@@ -48,7 +48,7 @@ is released separately.
 ## Regenerating the paper's tables and figures
 
     export CDC_ROOT=$(pwd)                      # optional; otherwise inferred from the file's path
-    python paper/scripts/make_tables.py             # 18 of the 21 tables
+    python paper/scripts/make_tables.py             # 19 of the 21 tables
     python paper/scripts/judge_agreement.py         # the judge-agreement table
     python paper/scripts/label_complexity_bound.py  # the label-complexity table
     python paper/scripts/qualitative.py             # the two qualitative tables
@@ -57,8 +57,7 @@ is released separately.
 
 A clean run reproduces the files already in `paper/data/tables` and `paper/figures` byte for byte,
 except that figure PDFs carry a creation timestamp -- compare the PNGs. Figure rendering depends on
-the matplotlib version; see `requirements.txt`. One table, the certificate on response quality, is
-written by the experiment that produces it (`scripts/e7_quality.py`) and needs the Alpaca data.
+the matplotlib version; see `requirements.txt`.
 
 Where a step would otherwise need something too large to distribute -- the study pool, the SAFT
 embedding matrices, the raw generations -- the quantity it actually uses is cached in `results/`

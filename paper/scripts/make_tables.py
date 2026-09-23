@@ -324,6 +324,23 @@ def pool2_table():
     open(f"{T}/pool2.tex", "w").write(body)
 
 
+
+def quality_table():
+    """E7: the certificate on response quality. Rendered from results/e7_quality.json, so the table
+    rebuilds without the Alpaca data the experiment itself needs."""
+    out = json.load(open(f"{W}/results/e7_quality.json"))
+    NS = out[next(iter(out))]["n"]
+    rows_t = []
+    for key, rec in out.items():
+        ptag, jd, a = key.split("|"); lab = {"q0.25": "0.25", "qnat": "0.82"}[ptag]
+        rows_t.append(f"{lab} & {jd} & {rec['auc']:.2f} & {a[1:]} & {rec['margin']:+.3f} & "
+                      + " & ".join(f"{r:.2f}/{p:.2f}" for r, p in zip(rec["rate"], rec["pred"]))
+                      + f" & {max(rec['false']):.3f} \\\\")
+    body = ("\\begin{tabular}{llrrr" + "r" * len(NS) + "r}\n\\toprule\npool low-quality & judge & AUC & $\\alpha$ & margin & "
+            + " & ".join(f"$n{{=}}{n}$" for n in NS) + " & worst false cert. \\\\\n\\midrule\n"
+            + "\n".join(rows_t) + "\n\\bottomrule\n\\end{tabular}\n")
+    open(f"{T}/e7_quality.tex", "w").write(body)
+
 def harmsets_table():
     """E15/E15-b/E16: the field's harm prompt sets (DirectHarm4, HarmBench standard, HEx-PHI public
     release) for every arm of Tables 1 and 3: beaver-dam flag rate per set and over all 900 prompts,
@@ -358,7 +375,7 @@ gate_table(); step2_table(); dose_table(); within05_table(); dose8_table(); util
 _ARMS = [("full", "Full pool", "--", "0"), ("random1400", "Random, size of certified", "--", "0"), ("anti_qwen", "Bottom 35\\% by judge (its rejects)", "Qwen-7B", "0"),
          ("cert400", "Certified, $\\alpha{=}.10$, $n{=}400$", "Qwen-7B", "400"), ("lgfilter", "Fixed cutoff", "Llama Guard 3", "0"), ("certlg400", "Certified, $\\alpha{=}.10$, $n{=}400$", "Llama Guard 3", "400"),
          ("certstrat2_lg800", "Stratified certified, $n{=}800$", "Llama Guard 3", "800"), ("safedemo0.1", "Stratified random, share $0.10$", "--", "0"), ("safedemo0.25", "Stratified random, share $0.25$", "--", "0"), ("safedemo0.54", "Stratified random, share $0.54$", "--", "0")]
-basemodel_table("tl_", "tinyllama", _ARMS); basemodel_table("qi_", "qwen_instruct", _ARMS); e3_table(); lambda_table(); strat_table(); pool2_table(); harmsets_table()
+basemodel_table("tl_", "tinyllama", _ARMS); basemodel_table("qi_", "qwen_instruct", _ARMS); e3_table(); lambda_table(); strat_table(); pool2_table(); harmsets_table(); quality_table()
 e3_table(arms=[("full", "No filter (SFT)", "0"), ("seal", "SEAL selector, top 80\\%, 3 epochs", "0$^\\dagger$"), ("seal_long", "SEAL selector, top 80\\%, 30 epochs", "0$^\\dagger$"),
                ("certseal", "Certified, SEAL score, 3 epochs", "400"), ("certseal_long", "Certified, SEAL score, 30 epochs", "400"), ("certstrat_seal", "Stratified certified, SEAL score, 30 epochs", "800"), ("oracle", "Oracle, all safe", "3000")],
          fname="seal_budgets", exclude=("oracle", "base", "full"))
