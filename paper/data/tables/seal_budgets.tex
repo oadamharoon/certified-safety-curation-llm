@@ -1,0 +1,13 @@
+\begin{tabular}{lrrccccccccc}
+\toprule
+training set & labels & size & harmful & demos & cert. & beaver-dam & MD-Judge & WildGuard & Llama Guard 3 & XSTest-unsafe & ROUGE-L \\
+\midrule
+No filter (SFT) & 0 & 3000 & 0.250 & 0.41 & -- & 0.443 $\pm$ 0.005 & 0.418 $\pm$ 0.002 & 0.457 $\pm$ 0.005 & 0.279 $\pm$ 0.002 & 0.612 $\pm$ 0.007 & 0.254 $\pm$ 0.001 \\
+SEAL selector, top 80\%, 3 epochs & 0$^\dagger$ & 2400 & 0.244 & 0.41 & -- & 0.452 $\pm$ 0.003 & 0.409 $\pm$ 0.002 & 0.457 $\pm$ 0.002 & 0.274 $\pm$ 0.002 & 0.588 $\pm$ 0.006 & 0.256 $\pm$ 0.000 \\
+SEAL selector, top 80\%, 30 epochs & 0$^\dagger$ & 2400 & 0.226 & 0.42 & -- & 0.437 $\pm$ 0.002 & 0.404 $\pm$ 0.002 & 0.443 $\pm$ 0.004 & 0.269 $\pm$ 0.004 & 0.595 $\pm$ 0.006 & 0.253 $\pm$ 0.002 \\
+Certified, SEAL score, 3 epochs & 400 & 2207 & 0.244 & 0.41 & 0/3 & 0.447 $\pm$ 0.004 & 0.416 $\pm$ 0.001 & 0.467 $\pm$ 0.002 & 0.285 $\pm$ 0.002 & 0.613 $\pm$ 0.007 & 0.253 $\pm$ 0.000 \\
+Certified, SEAL score, 30 epochs & 400 & 2207 & 0.217 & 0.42 & 0/3 & 0.429 $\pm$ 0.006 & 0.396 $\pm$ 0.003 & 0.447 $\pm$ 0.001 & 0.265 $\pm$ 0.003 & \textbf{0.570 $\pm$ 0.013} & 0.253 $\pm$ 0.001 \\
+Stratified certified, SEAL score, 30 epochs & 800 & 1906 & 0.201 & 0.42 & 0/3 & \textbf{0.423 $\pm$ 0.009} & \textbf{0.395 $\pm$ 0.005} & \textbf{0.437 $\pm$ 0.007} & \textbf{0.261 $\pm$ 0.007} & 0.597 $\pm$ 0.012 & 0.254 $\pm$ 0.001 \\
+Oracle, all safe & 3000 & 2250 & 0.000 & 0.55 & -- & 0.343 $\pm$ 0.002 & 0.303 $\pm$ 0.001 & 0.350 $\pm$ 0.003 & 0.193 $\pm$ 0.002 & 0.377 $\pm$ 0.002 & 0.255 $\pm$ 0.001 \\
+\bottomrule
+\end{tabular}

@@ -1,0 +1,12 @@
+\begin{tabular}{llrcccccccc}
+\toprule
+training set & scorer & labels & harmful & demos & cert. & beaver-dam & MD-Judge & WildGuard & Llama Guard 3 & XSTest-unsafe \\
+\midrule
+Full pool & -- & 0 & 0.250 & 0.32 & -- & 0.439 $\pm$ 0.008 & 0.449 $\pm$ 0.005 & 0.492 $\pm$ 0.006 & \textbf{0.294 $\pm$ 0.002} & 0.618 $\pm$ 0.007 \\
+Random, size of certified & -- & 0 & 0.247 & 0.32 & -- & 0.458 $\pm$ 0.001 & 0.455 $\pm$ 0.001 & 0.505 $\pm$ 0.002 & 0.303 $\pm$ 0.003 & 0.630 $\pm$ 0.020 \\
+Certified, $\alpha{=}.10$, $n{=}400$ & Qwen-7B & 400 & 0.059 & 0.29 & 3/3 & 0.474 $\pm$ 0.008 & 0.468 $\pm$ 0.005 & 0.517 $\pm$ 0.004 & 0.319 $\pm$ 0.005 & 0.653 $\pm$ 0.010 \\
+Certified, $\alpha{=}.10$, $n{=}400$ & Llama Guard 3 & 400 & 0.030 & 0.37 & 3/3 & \textbf{0.384 $\pm$ 0.002} & \textbf{0.382 $\pm$ 0.003} & \textbf{0.417 $\pm$ 0.005} & \textcolor{gray}{0.240 $\pm$ 0.005} & \textbf{0.495 $\pm$ 0.006} \\
+Stratified certified, $n{=}800$ & Llama Guard 3 & 800 & 0.100 & 0.45 & 3/3 & 0.394 $\pm$ 0.004 & 0.393 $\pm$ 0.005 & 0.435 $\pm$ 0.002 & \textcolor{gray}{0.255 $\pm$ 0.003} & 0.507 $\pm$ 0.009 \\
+Oracle, all safe & -- & 4000 & 0.000 & 0.42 & -- & 0.377 $\pm$ 0.001 & 0.385 $\pm$ 0.002 & 0.416 $\pm$ 0.003 & 0.238 $\pm$ 0.001 & 0.497 $\pm$ 0.007 \\
+\bottomrule
+\end{tabular}

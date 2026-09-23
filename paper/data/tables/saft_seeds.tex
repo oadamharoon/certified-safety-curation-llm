@@ -1,0 +1,12 @@
+\begin{tabular}{llrrrrrrr}
+\toprule
+variant & seed & layer & $d$ & val.\ F1 & kept & harmful & beaver-dam & ROUGE-L \\
+\midrule
+layer 15 (as published) & 0 & 15 & 1 & 0.43 & 1004 & 0.219 & 0.398 & 0.246 \\
+layer 15 (as published) & 1 & 15 & 1 & 0.50 & 34 & 0.235 & 0.066 & 0.119 \\
+layer 15 (as published) & 2 & 15 & 2 & 0.44 & 2519 & 0.222 & 0.398 & 0.253 \\
+layer validated & 0 & 15 & 1 & 0.43 & 1004 & 0.219 & 0.410 & 0.243 \\
+layer validated & 1 & 32 & 3 & 0.52 & 31 & 0.452 & 0.066 & 0.119 \\
+layer validated & 2 & 15 & 2 & 0.44 & 2519 & 0.222 & 0.406 & 0.251 \\
+\bottomrule
+\end{tabular}

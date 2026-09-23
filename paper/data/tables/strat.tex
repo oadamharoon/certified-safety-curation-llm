@@ -1,0 +1,14 @@
+\begin{tabular}{lcccccccc}
+\toprule
+training set & harmful & demos & cert. & beaver-dam & MD-Judge & WildGuard & Llama Guard 3 & XSTest-unsafe \\
+\midrule
+Full pool & 0.250 & 0.41 & -- & 0.454 $\pm$ 0.005 & 0.458 $\pm$ 0.002 & 0.503 $\pm$ 0.003 & 0.321 $\pm$ 0.002 & 0.646 $\pm$ 0.008 \\
+Certified, $\alpha{=}.10$, $n{=}400$ & 0.098 & 0.42 & 1/5 & 0.379 $\pm$ 0.008 & 0.390 $\pm$ 0.010 & 0.420 $\pm$ 0.010 & \textcolor{gray}{0.255 $\pm$ 0.010} & 0.534 $\pm$ 0.013 \\
+Stratified, $\alpha{=}.10$ both strata, $n{=}400$ & 0.103 & 0.45 & 0/3 & 0.370 $\pm$ 0.002 & 0.379 $\pm$ 0.004 & 0.407 $\pm$ 0.004 & \textcolor{gray}{0.246 $\pm$ 0.005} & 0.500 $\pm$ 0.000 \\
+Stratified, $\alpha{=}.10$ both strata, $n{=}800$ & 0.114 & 0.53 & 0/3 & \textbf{0.355 $\pm$ 0.006} & \textbf{0.371 $\pm$ 0.002} & \textbf{0.393 $\pm$ 0.006} & \textcolor{gray}{0.238 $\pm$ 0.003} & \textbf{0.472 $\pm$ 0.002} \\
+Stratified, $\alpha_h{=}.20$, $\alpha_b{=}.15$, $n{=}800$ & 0.118 & 0.52 & 2/3 & 0.367 $\pm$ 0.006 & 0.379 $\pm$ 0.007 & 0.406 $\pm$ 0.005 & \textcolor{gray}{0.245 $\pm$ 0.001} & 0.485 $\pm$ 0.000 \\
+Labeled-safe only, $n{=}800$, no scorer & 0.000 & 0.54 & -- & 0.417 $\pm$ 0.012 & 0.440 $\pm$ 0.007 & 0.475 $\pm$ 0.008 & \textbf{0.301 $\pm$ 0.012} & 0.600 $\pm$ 0.020 \\
+Random plus the labeled demonstrations, $n{=}800$ & 0.216 & 0.48 & -- & 0.449 $\pm$ 0.007 & 0.456 $\pm$ 0.003 & 0.491 $\pm$ 0.005 & 0.311 $\pm$ 0.005 & 0.608 $\pm$ 0.022 \\
+Oracle & 0.000 & 0.54 & -- & 0.357 $\pm$ 0.002 & 0.371 $\pm$ 0.003 & 0.397 $\pm$ 0.003 & 0.244 $\pm$ 0.003 & 0.500 $\pm$ 0.003 \\
+\bottomrule
+\end{tabular}

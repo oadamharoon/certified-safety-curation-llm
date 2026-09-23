@@ -1,0 +1,10 @@
+\begin{tabular}{lcccc}
+\toprule
+training set & beaver-dam & MD-Judge & WildGuard & Llama Guard 3 \\
+\midrule
+stratified random, no scorer (share $0.25$) & 0.467 $\pm$ 0.005 & 0.479 $\pm$ 0.004 & 0.525 $\pm$ 0.005 & 0.334 $\pm$ 0.005 \\
+harmful examples from the judge's top third & 0.455 $\pm$ 0.001 & 0.469 $\pm$ 0.003 & 0.509 $\pm$ 0.005 & 0.321 $\pm$ 0.004 \\
+top third, safe examples from the top of the within-safe ranking & 0.487 $\pm$ 0.004 & 0.509 $\pm$ 0.001 & 0.541 $\pm$ 0.004 & 0.346 $\pm$ 0.002 \\
+certified, judge (Table~\ref{tab:step2}) & 0.488 $\pm$ 0.002 & 0.505 $\pm$ 0.004 & 0.537 $\pm$ 0.002 & 0.349 $\pm$ 0.003 \\
+\bottomrule
+\end{tabular}

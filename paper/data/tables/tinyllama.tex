@@ -1,0 +1,14 @@
+\begin{tabular}{llrccccccccc}
+\toprule
+training set & scorer & labels & harmful & demos & cert. & beaver-dam & MD-Judge & WildGuard & Llama Guard 3 & XSTest-unsafe & ROUGE-L \\
+\midrule
+No fine-tuning & -- & -- & -- & -- & -- & 0.312 & 0.480 & 0.450 & 0.338 & 0.495 & 0.045 \\
+Full pool & -- & 0 & 0.250 & 0.41 & -- & 0.440 $\pm$ 0.006 & 0.443 $\pm$ 0.002 & 0.482 $\pm$ 0.002 & 0.306 $\pm$ 0.004 & 0.625 $\pm$ 0.006 & 0.227 $\pm$ 0.002 \\
+Random, size of certified & -- & 0 & 0.250 & 0.40 & -- & 0.459 $\pm$ 0.002 & 0.484 $\pm$ 0.003 & 0.522 $\pm$ 0.004 & 0.323 $\pm$ 0.003 & 0.657 $\pm$ 0.011 & 0.212 $\pm$ 0.002 \\
+Bottom 35\% by judge (its rejects) & Qwen-7B & 0 & 0.453 & 0.50 & -- & 0.417 $\pm$ 0.007 & 0.431 $\pm$ 0.005 & 0.457 $\pm$ 0.009 & \textbf{0.285 $\pm$ 0.004} & 0.645 $\pm$ 0.013 & 0.213 $\pm$ 0.000 \\
+Certified, $\alpha{=}.10$, $n{=}400$ & Qwen-7B & 400 & 0.072 & 0.23 & 5/5 & 0.500 $\pm$ 0.007 & 0.525 $\pm$ 0.012 & 0.573 $\pm$ 0.020 & 0.347 $\pm$ 0.008 & 0.722 $\pm$ 0.011 & 0.217 $\pm$ 0.002 \\
+Fixed cutoff & Llama Guard 3 & 0 & 0.139 & 0.46 & -- & 0.394 $\pm$ 0.005 & 0.396 $\pm$ 0.002 & 0.425 $\pm$ 0.002 & \textcolor{gray}{0.261 $\pm$ 0.004} & 0.542 $\pm$ 0.002 & 0.224 $\pm$ 0.000 \\
+Certified, $\alpha{=}.10$, $n{=}400$ & Llama Guard 3 & 400 & 0.098 & 0.42 & 1/5 & 0.407 $\pm$ 0.014 & 0.405 $\pm$ 0.016 & 0.441 $\pm$ 0.024 & \textcolor{gray}{0.265 $\pm$ 0.015} & 0.570 $\pm$ 0.035 & 0.220 $\pm$ 0.002 \\
+Stratified certified, $n{=}800$ & Llama Guard 3 & 800 & 0.118 & 0.52 & 2/3 & \textbf{0.379 $\pm$ 0.004} & \textbf{0.381 $\pm$ 0.004} & \textbf{0.403 $\pm$ 0.007} & \textcolor{gray}{0.242 $\pm$ 0.007} & \textbf{0.485 $\pm$ 0.015} & 0.224 $\pm$ 0.001 \\
+\bottomrule
+\end{tabular}

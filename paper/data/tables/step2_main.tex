@@ -1,0 +1,27 @@
+\begin{tabular}{llrccccccc}
+\toprule
+training set & scorer & labels & harmful & safety & cert. & \multicolumn{4}{c}{harmful generations} \\
+\cmidrule(lr){7-10}
+ & & & frac. & demos & & beaver-dam & MD-Judge & WildGuard & Llama Guard 3 \\
+\midrule
+No fine-tuning & -- & -- & -- & -- & -- & 0.446 & 0.572 & 0.576 & 0.424 \\
+Full pool & -- & 0 & 0.250 & 0.41 & -- & 0.454 $\pm$ 0.005 & 0.458 $\pm$ 0.002 & 0.503 $\pm$ 0.003 & 0.321 $\pm$ 0.002 \\
+Random, size of certified & -- & 0 & 0.250 & 0.40 & -- & 0.463 $\pm$ 0.005 & 0.478 $\pm$ 0.004 & 0.513 $\pm$ 0.004 & 0.330 $\pm$ 0.005 \\
+\midrule
+Top 75\% by judge (fixed cutoff) & Qwen-7B & 0 & 0.176 & 0.38 & -- & 0.461 $\pm$ 0.008 & 0.473 $\pm$ 0.005 & 0.511 $\pm$ 0.001 & 0.325 $\pm$ 0.003 \\
+Bottom 35\% by judge (its rejects) & Qwen-7B & 0 & 0.453 & 0.50 & -- & 0.447 $\pm$ 0.005 & 0.458 $\pm$ 0.001 & 0.479 $\pm$ 0.008 & 0.318 $\pm$ 0.000 \\
+Certified, $\alpha{=}.10$, $n{=}400$ & Qwen-7B & 400 & 0.072 & 0.23 & 5/5 & 0.488 $\pm$ 0.002 & 0.505 $\pm$ 0.004 & 0.537 $\pm$ 0.002 & 0.349 $\pm$ 0.003 \\
+Stratified certified, $n{=}800$ & Qwen-7B & 800 & 0.117 & 0.34 & 2/3 & 0.481 $\pm$ 0.010 & 0.490 $\pm$ 0.008 & 0.531 $\pm$ 0.016 & 0.345 $\pm$ 0.009 \\
+\midrule
+Fixed cutoff & Llama Guard 3 & 0 & 0.139 & 0.46 & -- & 0.386 $\pm$ 0.008 & 0.394 $\pm$ 0.007 & 0.419 $\pm$ 0.002 & \textcolor{gray}{0.259 $\pm$ 0.006} \\
+Certified, $\alpha{=}.10$, $n{=}400$ & Llama Guard 3 & 400 & 0.098 & 0.42 & 1/5 & 0.379 $\pm$ 0.008 & 0.390 $\pm$ 0.010 & 0.420 $\pm$ 0.010 & \textcolor{gray}{0.255 $\pm$ 0.010} \\
+Stratified certified, $n{=}800$ & Llama Guard 3 & 800 & 0.118 & 0.52 & 2/3 & \textbf{0.367 $\pm$ 0.006} & \textbf{0.379 $\pm$ 0.007} & \textbf{0.406 $\pm$ 0.005} & \textcolor{gray}{0.245 $\pm$ 0.001} \\
+\midrule
+SAFT (spectral score, tuned $\tau$) & 0.5B embeddings & 100 & 0.224 & 0.42 & -- & 0.475 $\pm$ 0.015 & 0.491 $\pm$ 0.015 & 0.521 $\pm$ 0.019 & 0.345 $\pm$ 0.006 \\
+Certified, $\alpha{=}.10$, $n{=}400$ & SAFT score & 400 & 0.257 & 0.39 & 0/3 & 0.453 $\pm$ 0.005 & 0.463 $\pm$ 0.006 & 0.498 $\pm$ 0.009 & 0.332 $\pm$ 0.006 \\
+Stratified certified, $n{=}800$ & SAFT score & 800 & 0.276 & 0.45 & 0/3 & 0.451 $\pm$ 0.004 & 0.463 $\pm$ 0.005 & 0.487 $\pm$ 0.008 & 0.329 $\pm$ 0.004 \\
+\midrule
+Labeled-safe only & -- & 200 & 0.000 & 0.54 & -- & 0.430 $\pm$ 0.003 & 0.440 $\pm$ 0.005 & 0.477 $\pm$ 0.007 & \textbf{0.305 $\pm$ 0.006} \\
+Oracle, all safe & -- & 4000 & 0.000 & 0.54 & -- & 0.357 $\pm$ 0.002 & 0.371 $\pm$ 0.003 & 0.397 $\pm$ 0.003 & 0.244 $\pm$ 0.003 \\
+\bottomrule
+\end{tabular}

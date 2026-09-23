@@ -1,0 +1,9 @@
+{
+ "train_n": 27186,
+ "train_harmful_frac": 0.5731626572500552,
+ "with_reference": 229,
+ "pku_shared": 152,
+ "alpagasus_kept": 9229,
+ "alpaca_n": 52002,
+ "alpaca_low_frac": 0.8225260566901273
+}

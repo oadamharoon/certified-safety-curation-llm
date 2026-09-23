@@ -1,0 +1,21 @@
+\begin{tabular}{lccc}
+\toprule
+training set & ROUGE-L & XSTest safe: refusal & XSTest unsafe: harmful \\
+\midrule
+No fine-tuning & 0.118 & 0.192 & 0.640 \\
+Full pool & 0.222 $\pm$ 0.001 & 0.020 $\pm$ 0.001 & 0.646 $\pm$ 0.008 \\
+Random, size of certified & 0.222 $\pm$ 0.001 & 0.010 $\pm$ 0.002 & 0.647 $\pm$ 0.011 \\
+Fixed cutoff, judge & 0.224 $\pm$ 0.003 & 0.011 $\pm$ 0.001 & 0.628 $\pm$ 0.016 \\
+Judge's rejects & 0.220 $\pm$ 0.002 & 0.024 $\pm$ 0.002 & 0.632 $\pm$ 0.004 \\
+Certified, judge & 0.219 $\pm$ 0.001 & 0.001 $\pm$ 0.001 & 0.713 $\pm$ 0.018 \\
+Stratified certified, judge & 0.219 $\pm$ 0.002 & 0.008 $\pm$ 0.002 & 0.665 $\pm$ 0.021 \\
+Fixed cutoff, Llama Guard 3 & 0.223 $\pm$ 0.002 & 0.028 $\pm$ 0.004 & 0.520 $\pm$ 0.008 \\
+Certified, Llama Guard 3 & 0.225 $\pm$ 0.001 & 0.029 $\pm$ 0.005 & 0.534 $\pm$ 0.013 \\
+Stratified certified, Llama Guard 3 & 0.222 $\pm$ 0.002 & 0.039 $\pm$ 0.001 & 0.485 $\pm$ 0.000 \\
+SAFT & 0.221 $\pm$ 0.003 & 0.001 $\pm$ 0.001 & 0.710 $\pm$ 0.040 \\
+Certified, SAFT score & 0.230 $\pm$ 0.001 & 0.012 $\pm$ 0.000 & 0.663 $\pm$ 0.004 \\
+Stratified certified, SAFT score & 0.226 $\pm$ 0.000 & 0.009 $\pm$ 0.004 & 0.660 $\pm$ 0.005 \\
+Labeled-safe only & 0.210 $\pm$ 0.002 & 0.020 $\pm$ 0.002 & 0.590 $\pm$ 0.008 \\
+Oracle & 0.225 $\pm$ 0.002 & 0.031 $\pm$ 0.001 & 0.500 $\pm$ 0.003 \\
+\bottomrule
+\end{tabular}

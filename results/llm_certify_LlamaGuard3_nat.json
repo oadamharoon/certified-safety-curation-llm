@@ -1,0 +1,15 @@
+{
+ "model": "meta-llama/Llama-Guard-3-8B",
+ "N": 4000,
+ "pool_unsafe": 0.57125,
+ "auc": 0.8394583766610739,
+ "pool_tag": "nat",
+ "alpha0.1": {
+  "cert_rate": 0.01,
+  "false_cert": 0.01
+ },
+ "alpha0.25": {
+  "cert_rate": 0.14,
+  "false_cert": 0.02
+ }
+}

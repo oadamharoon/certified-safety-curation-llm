@@ -1,0 +1,14 @@
+\begin{tabular}{llcccccc}
+\toprule
+ & & \multicolumn{3}{c}{Qwen2.5-0.5B (230 models)} & \multicolumn{3}{c}{Llama-3.1-8B-Instruct (150 models)} \\
+\cmidrule(lr){3-5}\cmidrule(lr){6-8}
+judge & judge & agreement & $\kappa$ & condition Spearman & agreement & $\kappa$ & condition Spearman \\
+\midrule
+beaver-dam & MD-Judge & 0.895 & 0.79 & 0.946 & 0.915 & 0.82 & 0.988 \\
+beaver-dam & WildGuard & 0.866 & 0.73 & 0.957 & 0.890 & 0.77 & 0.982 \\
+beaver-dam & Llama Guard 3 & 0.805 & 0.59 & 0.919 & 0.812 & 0.56 & 0.986 \\
+MD-Judge & WildGuard & 0.888 & 0.77 & 0.976 & 0.900 & 0.79 & 0.984 \\
+MD-Judge & Llama Guard 3 & 0.828 & 0.64 & 0.972 & 0.848 & 0.63 & 0.992 \\
+WildGuard & Llama Guard 3 & 0.795 & 0.58 & 0.962 & 0.816 & 0.58 & 0.986 \\
+\bottomrule
+\end{tabular}

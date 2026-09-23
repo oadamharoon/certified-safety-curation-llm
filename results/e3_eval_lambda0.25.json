@@ -1,0 +1,875 @@
+{
+ "anti_s0": {
+  "beaverdam": 0.38,
+  "mdjudge": 0.358,
+  "wildguard": 0.392,
+  "llamaguard": 0.224,
+  "xstest_safe_refusal": 0.016,
+  "xstest_unsafe_harmful": 0.345,
+  "rouge_l": 0.2544713737463685
+ },
+ "anti_s1": {
+  "beaverdam": 0.392,
+  "mdjudge": 0.364,
+  "wildguard": 0.406,
+  "llamaguard": 0.224,
+  "xstest_safe_refusal": 0.016,
+  "xstest_unsafe_harmful": 0.38,
+  "rouge_l": 0.2515112522670654
+ },
+ "anti_s2": {
+  "beaverdam": 0.384,
+  "mdjudge": 0.352,
+  "wildguard": 0.4,
+  "llamaguard": 0.214,
+  "xstest_safe_refusal": 0.016,
+  "xstest_unsafe_harmful": 0.355,
+  "rouge_l": 0.24932706326584803
+ },
+ "base_s0": {
+  "beaverdam": 0.064,
+  "mdjudge": 0.056,
+  "wildguard": 0.024,
+  "llamaguard": 0.01,
+  "xstest_safe_refusal": 0.076,
+  "xstest_unsafe_harmful": 0.0,
+  "rouge_l": 0.11830915051263591
+ },
+ "certlg_s0": {
+  "beaverdam": 0.33,
+  "mdjudge": 0.296,
+  "wildguard": 0.336,
+  "llamaguard": 0.172,
+  "xstest_safe_refusal": 0.028,
+  "xstest_unsafe_harmful": 0.315,
+  "rouge_l": 0.24327358516967232
+ },
+ "certlg_s1": {
+  "beaverdam": 0.236,
+  "mdjudge": 0.208,
+  "wildguard": 0.238,
+  "llamaguard": 0.106,
+  "xstest_safe_refusal": 0.028,
+  "xstest_unsafe_harmful": 0.2,
+  "rouge_l": 0.22011876494714958
+ },
+ "certlg_s2": {
+  "beaverdam": 0.32,
+  "mdjudge": 0.29,
+  "wildguard": 0.33,
+  "llamaguard": 0.174,
+  "xstest_safe_refusal": 0.024,
+  "xstest_unsafe_harmful": 0.33,
+  "rouge_l": 0.2525543208311833
+ },
+ "certprompt_s0": {
+  "beaverdam": 0.5,
+  "mdjudge": 0.474,
+  "wildguard": 0.53,
+  "llamaguard": 0.33,
+  "xstest_safe_refusal": 0.008,
+  "xstest_unsafe_harmful": 0.73,
+  "rouge_l": 0.24964503159446122
+ },
+ "certprompt_s1": {
+  "beaverdam": 0.496,
+  "mdjudge": 0.466,
+  "wildguard": 0.512,
+  "llamaguard": 0.328,
+  "xstest_safe_refusal": 0.008,
+  "xstest_unsafe_harmful": 0.715,
+  "rouge_l": 0.2516702753269367
+ },
+ "certprompt_s2": {
+  "beaverdam": 0.49,
+  "mdjudge": 0.476,
+  "wildguard": 0.53,
+  "llamaguard": 0.324,
+  "xstest_safe_refusal": 0.012,
+  "xstest_unsafe_harmful": 0.705,
+  "rouge_l": 0.2511619141900264
+ },
+ "certsaft_s0": {
+  "beaverdam": 0.402,
+  "mdjudge": 0.378,
+  "wildguard": 0.428,
+  "llamaguard": 0.248,
+  "xstest_safe_refusal": 0.016,
+  "xstest_unsafe_harmful": 0.47,
+  "rouge_l": 0.25421016605751295
+ },
+ "certsaft_s1": {
+  "beaverdam": 0.394,
+  "mdjudge": 0.376,
+  "wildguard": 0.412,
+  "llamaguard": 0.24,
+  "xstest_safe_refusal": 0.02,
+  "xstest_unsafe_harmful": 0.445,
+  "rouge_l": 0.25684677385873916
+ },
+ "certsaft_s2": {
+  "beaverdam": 0.41,
+  "mdjudge": 0.388,
+  "wildguard": 0.422,
+  "llamaguard": 0.248,
+  "xstest_safe_refusal": 0.012,
+  "xstest_unsafe_harmful": 0.515,
+  "rouge_l": 0.2542435560259947
+ },
+ "certseal_long_s0": {
+  "beaverdam": 0.43,
+  "mdjudge": 0.398,
+  "wildguard": 0.446,
+  "llamaguard": 0.268,
+  "xstest_safe_refusal": 0.016,
+  "xstest_unsafe_harmful": 0.595,
+  "rouge_l": 0.25346984132579986
+ },
+ "certseal_long_s1": {
+  "beaverdam": 0.418,
+  "mdjudge": 0.39,
+  "wildguard": 0.448,
+  "llamaguard": 0.268,
+  "xstest_safe_refusal": 0.02,
+  "xstest_unsafe_harmful": 0.565,
+  "rouge_l": 0.2504347437969989
+ },
+ "certseal_long_s2": {
+  "beaverdam": 0.438,
+  "mdjudge": 0.4,
+  "wildguard": 0.446,
+  "llamaguard": 0.26,
+  "xstest_safe_refusal": 0.02,
+  "xstest_unsafe_harmful": 0.55,
+  "rouge_l": 0.2542089255661489
+ },
+ "certseal_s0": {
+  "beaverdam": 0.442,
+  "mdjudge": 0.416,
+  "wildguard": 0.47,
+  "llamaguard": 0.284,
+  "xstest_safe_refusal": 0.012,
+  "xstest_unsafe_harmful": 0.62,
+  "rouge_l": 0.2537765850214282
+ },
+ "certseal_s1": {
+  "beaverdam": 0.446,
+  "mdjudge": 0.418,
+  "wildguard": 0.466,
+  "llamaguard": 0.288,
+  "xstest_safe_refusal": 0.012,
+  "xstest_unsafe_harmful": 0.6,
+  "rouge_l": 0.2529440615828859
+ },
+ "certseal_s2": {
+  "beaverdam": 0.454,
+  "mdjudge": 0.414,
+  "wildguard": 0.464,
+  "llamaguard": 0.282,
+  "xstest_safe_refusal": 0.012,
+  "xstest_unsafe_harmful": 0.62,
+  "rouge_l": 0.25373183997721677
+ },
+ "certstrat2_s0": {
+  "beaverdam": 0.324,
+  "mdjudge": 0.298,
+  "wildguard": 0.34,
+  "llamaguard": 0.172,
+  "xstest_safe_refusal": 0.028,
+  "xstest_unsafe_harmful": 0.305,
+  "rouge_l": 0.2497871254359936
+ },
+ "certstrat2_s1": {
+  "beaverdam": 0.33,
+  "mdjudge": 0.298,
+  "wildguard": 0.34,
+  "llamaguard": 0.17,
+  "xstest_safe_refusal": 0.028,
+  "xstest_unsafe_harmful": 0.33,
+  "rouge_l": 0.2465139747602394
+ },
+ "certstrat2_s2": {
+  "beaverdam": 0.338,
+  "mdjudge": 0.298,
+  "wildguard": 0.344,
+  "llamaguard": 0.188,
+  "xstest_safe_refusal": 0.028,
+  "xstest_unsafe_harmful": 0.33,
+  "rouge_l": 0.25359369389192926
+ },
+ "certstrat_prompt_s0": {
+  "beaverdam": 0.516,
+  "mdjudge": 0.486,
+  "wildguard": 0.546,
+  "llamaguard": 0.338,
+  "xstest_safe_refusal": 0.004,
+  "xstest_unsafe_harmful": 0.775,
+  "rouge_l": 0.2505474093385121
+ },
+ "certstrat_prompt_s1": {
+  "beaverdam": 0.518,
+  "mdjudge": 0.48,
+  "wildguard": 0.54,
+  "llamaguard": 0.328,
+  "xstest_safe_refusal": 0.008,
+  "xstest_unsafe_harmful": 0.755,
+  "rouge_l": 0.24563951474276655
+ },
+ "certstrat_prompt_s2": {
+  "beaverdam": 0.5,
+  "mdjudge": 0.478,
+  "wildguard": 0.538,
+  "llamaguard": 0.328,
+  "xstest_safe_refusal": 0.004,
+  "xstest_unsafe_harmful": 0.76,
+  "rouge_l": 0.24533802328553989
+ },
+ "certstrat_saft_s0": {
+  "beaverdam": 0.412,
+  "mdjudge": 0.368,
+  "wildguard": 0.424,
+  "llamaguard": 0.23,
+  "xstest_safe_refusal": 0.016,
+  "xstest_unsafe_harmful": 0.515,
+  "rouge_l": 0.2500519496102473
+ },
+ "certstrat_saft_s1": {
+  "beaverdam": 0.398,
+  "mdjudge": 0.372,
+  "wildguard": 0.416,
+  "llamaguard": 0.238,
+  "xstest_safe_refusal": 0.02,
+  "xstest_unsafe_harmful": 0.49,
+  "rouge_l": 0.25075383804102946
+ },
+ "certstrat_saft_s2": {
+  "beaverdam": 0.396,
+  "mdjudge": 0.37,
+  "wildguard": 0.414,
+  "llamaguard": 0.236,
+  "xstest_safe_refusal": 0.012,
+  "xstest_unsafe_harmful": 0.465,
+  "rouge_l": 0.25127408781107974
+ },
+ "certstrat_seal_s0": {
+  "beaverdam": 0.43,
+  "mdjudge": 0.392,
+  "wildguard": 0.438,
+  "llamaguard": 0.264,
+  "xstest_safe_refusal": 0.02,
+  "xstest_unsafe_harmful": 0.615,
+  "rouge_l": 0.25588971002978345
+ },
+ "certstrat_seal_s1": {
+  "beaverdam": 0.404,
+  "mdjudge": 0.388,
+  "wildguard": 0.424,
+  "llamaguard": 0.248,
+  "xstest_safe_refusal": 0.02,
+  "xstest_unsafe_harmful": 0.575,
+  "rouge_l": 0.2525268264552814
+ },
+ "certstrat_seal_s2": {
+  "beaverdam": 0.434,
+  "mdjudge": 0.406,
+  "wildguard": 0.448,
+  "llamaguard": 0.272,
+  "xstest_safe_refusal": 0.02,
+  "xstest_unsafe_harmful": 0.6,
+  "rouge_l": 0.25243963249192874
+ },
+ "full_s0": {
+  "beaverdam": 0.436,
+  "mdjudge": 0.414,
+  "wildguard": 0.448,
+  "llamaguard": 0.276,
+  "xstest_safe_refusal": 0.012,
+  "xstest_unsafe_harmful": 0.6,
+  "rouge_l": 0.2555904927374372
+ },
+ "full_s1": {
+  "beaverdam": 0.452,
+  "mdjudge": 0.422,
+  "wildguard": 0.466,
+  "llamaguard": 0.284,
+  "xstest_safe_refusal": 0.012,
+  "xstest_unsafe_harmful": 0.625,
+  "rouge_l": 0.2545525325308048
+ },
+ "full_s2": {
+  "beaverdam": 0.44,
+  "mdjudge": 0.418,
+  "wildguard": 0.456,
+  "llamaguard": 0.278,
+  "xstest_safe_refusal": 0.012,
+  "xstest_unsafe_harmful": 0.61,
+  "rouge_l": 0.25092811286655237
+ },
+ "harmbot8_s0": {
+  "beaverdam": 0.42,
+  "mdjudge": 0.388,
+  "wildguard": 0.43,
+  "llamaguard": 0.26,
+  "xstest_safe_refusal": 0.028,
+  "xstest_unsafe_harmful": 0.62,
+  "rouge_l": 0.24424362777114259
+ },
+ "harmbot8_s1": {
+  "beaverdam": 0.45,
+  "mdjudge": 0.418,
+  "wildguard": 0.458,
+  "llamaguard": 0.278,
+  "xstest_safe_refusal": 0.016,
+  "xstest_unsafe_harmful": 0.6,
+  "rouge_l": 0.251630154708291
+ },
+ "harmbot8_s2": {
+  "beaverdam": 0.436,
+  "mdjudge": 0.414,
+  "wildguard": 0.472,
+  "llamaguard": 0.284,
+  "xstest_safe_refusal": 0.016,
+  "xstest_unsafe_harmful": 0.64,
+  "rouge_l": 0.2485006729948774
+ },
+ "harmmid8_s0": {
+  "beaverdam": 0.38,
+  "mdjudge": 0.352,
+  "wildguard": 0.388,
+  "llamaguard": 0.214,
+  "xstest_safe_refusal": 0.012,
+  "xstest_unsafe_harmful": 0.485,
+  "rouge_l": 0.2496151584271403
+ },
+ "harmmid8_s1": {
+  "beaverdam": 0.416,
+  "mdjudge": 0.364,
+  "wildguard": 0.414,
+  "llamaguard": 0.23,
+  "xstest_safe_refusal": 0.012,
+  "xstest_unsafe_harmful": 0.49,
+  "rouge_l": 0.25554767620332497
+ },
+ "harmmid8_s2": {
+  "beaverdam": 0.394,
+  "mdjudge": 0.372,
+  "wildguard": 0.418,
+  "llamaguard": 0.242,
+  "xstest_safe_refusal": 0.016,
+  "xstest_unsafe_harmful": 0.51,
+  "rouge_l": 0.2500009697863168
+ },
+ "harmtop8_s0": {
+  "beaverdam": 0.356,
+  "mdjudge": 0.328,
+  "wildguard": 0.368,
+  "llamaguard": 0.206,
+  "xstest_safe_refusal": 0.02,
+  "xstest_unsafe_harmful": 0.405,
+  "rouge_l": 0.2530631394813339
+ },
+ "harmtop8_s1": {
+  "beaverdam": 0.362,
+  "mdjudge": 0.33,
+  "wildguard": 0.382,
+  "llamaguard": 0.204,
+  "xstest_safe_refusal": 0.028,
+  "xstest_unsafe_harmful": 0.415,
+  "rouge_l": 0.25156423342269263
+ },
+ "harmtop8_s2": {
+  "beaverdam": 0.372,
+  "mdjudge": 0.34,
+  "wildguard": 0.404,
+  "llamaguard": 0.22,
+  "xstest_safe_refusal": 0.02,
+  "xstest_unsafe_harmful": 0.49,
+  "rouge_l": 0.25190124316796214
+ },
+ "labels800_8_s0": {
+  "beaverdam": 0.288,
+  "mdjudge": 0.27,
+  "wildguard": 0.314,
+  "llamaguard": 0.154,
+  "xstest_safe_refusal": 0.028,
+  "xstest_unsafe_harmful": 0.29,
+  "rouge_l": 0.23568323049430895
+ },
+ "labels800_8_s1": {
+  "beaverdam": 0.318,
+  "mdjudge": 0.302,
+  "wildguard": 0.342,
+  "llamaguard": 0.18,
+  "xstest_safe_refusal": 0.028,
+  "xstest_unsafe_harmful": 0.33,
+  "rouge_l": 0.23299763444876623
+ },
+ "labels800_8_s2": {
+  "beaverdam": 0.292,
+  "mdjudge": 0.262,
+  "wildguard": 0.31,
+  "llamaguard": 0.146,
+  "xstest_safe_refusal": 0.032,
+  "xstest_unsafe_harmful": 0.255,
+  "rouge_l": 0.24268774455890846
+ },
+ "labels_s0": {
+  "beaverdam": 0.236,
+  "mdjudge": 0.22,
+  "wildguard": 0.222,
+  "llamaguard": 0.108,
+  "xstest_safe_refusal": 0.044,
+  "xstest_unsafe_harmful": 0.16,
+  "rouge_l": 0.20125325436566896
+ },
+ "labels_s1": {
+  "beaverdam": 0.218,
+  "mdjudge": 0.214,
+  "wildguard": 0.212,
+  "llamaguard": 0.11,
+  "xstest_safe_refusal": 0.036,
+  "xstest_unsafe_harmful": 0.185,
+  "rouge_l": 0.2043641335302552
+ },
+ "labels_s2": {
+  "beaverdam": 0.202,
+  "mdjudge": 0.188,
+  "wildguard": 0.192,
+  "llamaguard": 0.088,
+  "xstest_safe_refusal": 0.044,
+  "xstest_unsafe_harmful": 0.15,
+  "rouge_l": 0.20846120121903766
+ },
+ "lgfilter_s0": {
+  "beaverdam": 0.342,
+  "mdjudge": 0.302,
+  "wildguard": 0.348,
+  "llamaguard": 0.186,
+  "xstest_safe_refusal": 0.016,
+  "xstest_unsafe_harmful": 0.35,
+  "rouge_l": 0.25233557722587835
+ },
+ "lgfilter_s1": {
+  "beaverdam": 0.342,
+  "mdjudge": 0.312,
+  "wildguard": 0.358,
+  "llamaguard": 0.186,
+  "xstest_safe_refusal": 0.016,
+  "xstest_unsafe_harmful": 0.35,
+  "rouge_l": 0.2559117394939237
+ },
+ "lgfilter_s2": {
+  "beaverdam": 0.348,
+  "mdjudge": 0.316,
+  "wildguard": 0.374,
+  "llamaguard": 0.198,
+  "xstest_safe_refusal": 0.024,
+  "xstest_unsafe_harmful": 0.35,
+  "rouge_l": 0.2548734103174034
+ },
+ "oracle_matched_s0": {
+  "beaverdam": 0.334,
+  "mdjudge": 0.298,
+  "wildguard": 0.342,
+  "llamaguard": 0.18,
+  "xstest_safe_refusal": 0.024,
+  "xstest_unsafe_harmful": 0.36,
+  "rouge_l": 0.2511851107119513
+ },
+ "oracle_matched_s1": {
+  "beaverdam": 0.268,
+  "mdjudge": 0.248,
+  "wildguard": 0.282,
+  "llamaguard": 0.144,
+  "xstest_safe_refusal": 0.032,
+  "xstest_unsafe_harmful": 0.275,
+  "rouge_l": 0.23620504810788703
+ },
+ "oracle_matched_s2": {
+  "beaverdam": 0.346,
+  "mdjudge": 0.314,
+  "wildguard": 0.36,
+  "llamaguard": 0.196,
+  "xstest_safe_refusal": 0.028,
+  "xstest_unsafe_harmful": 0.365,
+  "rouge_l": 0.24810704002544173
+ },
+ "oracle_s0": {
+  "beaverdam": 0.338,
+  "mdjudge": 0.302,
+  "wildguard": 0.344,
+  "llamaguard": 0.19,
+  "xstest_safe_refusal": 0.02,
+  "xstest_unsafe_harmful": 0.375,
+  "rouge_l": 0.2563339294402202
+ },
+ "oracle_s1": {
+  "beaverdam": 0.344,
+  "mdjudge": 0.306,
+  "wildguard": 0.352,
+  "llamaguard": 0.192,
+  "xstest_safe_refusal": 0.024,
+  "xstest_unsafe_harmful": 0.375,
+  "rouge_l": 0.2529068392928137
+ },
+ "oracle_s2": {
+  "beaverdam": 0.346,
+  "mdjudge": 0.302,
+  "wildguard": 0.354,
+  "llamaguard": 0.196,
+  "xstest_safe_refusal": 0.02,
+  "xstest_unsafe_harmful": 0.38,
+  "rouge_l": 0.2549786892296307
+ },
+ "prompting_s0": {
+  "beaverdam": 0.474,
+  "mdjudge": 0.458,
+  "wildguard": 0.49,
+  "llamaguard": 0.304,
+  "xstest_safe_refusal": 0.012,
+  "xstest_unsafe_harmful": 0.66,
+  "rouge_l": 0.2517243713267956
+ },
+ "prompting_s1": {
+  "beaverdam": 0.472,
+  "mdjudge": 0.458,
+  "wildguard": 0.482,
+  "llamaguard": 0.296,
+  "xstest_safe_refusal": 0.008,
+  "xstest_unsafe_harmful": 0.69,
+  "rouge_l": 0.2522789203949264
+ },
+ "prompting_s2": {
+  "beaverdam": 0.486,
+  "mdjudge": 0.454,
+  "wildguard": 0.488,
+  "llamaguard": 0.314,
+  "xstest_safe_refusal": 0.008,
+  "xstest_unsafe_harmful": 0.665,
+  "rouge_l": 0.25336546440300206
+ },
+ "randdemo8_s0": {
+  "beaverdam": 0.442,
+  "mdjudge": 0.408,
+  "wildguard": 0.454,
+  "llamaguard": 0.276,
+  "xstest_safe_refusal": 0.016,
+  "xstest_unsafe_harmful": 0.615,
+  "rouge_l": 0.252435015631269
+ },
+ "randdemo8_s1": {
+  "beaverdam": 0.388,
+  "mdjudge": 0.362,
+  "wildguard": 0.414,
+  "llamaguard": 0.228,
+  "xstest_safe_refusal": 0.02,
+  "xstest_unsafe_harmful": 0.53,
+  "rouge_l": 0.24246416116840933
+ },
+ "randdemo8_s2": {
+  "beaverdam": 0.44,
+  "mdjudge": 0.41,
+  "wildguard": 0.45,
+  "llamaguard": 0.272,
+  "xstest_safe_refusal": 0.016,
+  "xstest_unsafe_harmful": 0.62,
+  "rouge_l": 0.25065683659751853
+ },
+ "random_s0": {
+  "beaverdam": 0.442,
+  "mdjudge": 0.406,
+  "wildguard": 0.45,
+  "llamaguard": 0.268,
+  "xstest_safe_refusal": 0.016,
+  "xstest_unsafe_harmful": 0.615,
+  "rouge_l": 0.253598369710302
+ },
+ "random_s1": {
+  "beaverdam": 0.424,
+  "mdjudge": 0.41,
+  "wildguard": 0.436,
+  "llamaguard": 0.264,
+  "xstest_safe_refusal": 0.012,
+  "xstest_unsafe_harmful": 0.615,
+  "rouge_l": 0.23280403232061267
+ },
+ "random_s2": {
+  "beaverdam": 0.446,
+  "mdjudge": 0.416,
+  "wildguard": 0.456,
+  "llamaguard": 0.276,
+  "xstest_safe_refusal": 0.016,
+  "xstest_unsafe_harmful": 0.655,
+  "rouge_l": 0.24990693449542498
+ },
+ "safedemo8_0.37_s0": {
+  "beaverdam": 0.412,
+  "mdjudge": 0.37,
+  "wildguard": 0.42,
+  "llamaguard": 0.244,
+  "xstest_safe_refusal": 0.016,
+  "xstest_unsafe_harmful": 0.535,
+  "rouge_l": 0.2496754937855284
+ },
+ "safedemo8_0.37_s1": {
+  "beaverdam": 0.394,
+  "mdjudge": 0.36,
+  "wildguard": 0.402,
+  "llamaguard": 0.226,
+  "xstest_safe_refusal": 0.02,
+  "xstest_unsafe_harmful": 0.515,
+  "rouge_l": 0.2514996519649956
+ },
+ "safedemo8_0.37_s2": {
+  "beaverdam": 0.382,
+  "mdjudge": 0.36,
+  "wildguard": 0.402,
+  "llamaguard": 0.228,
+  "xstest_safe_refusal": 0.012,
+  "xstest_unsafe_harmful": 0.515,
+  "rouge_l": 0.25689013922379667
+ },
+ "safedemo8_0.3_s0": {
+  "beaverdam": 0.394,
+  "mdjudge": 0.372,
+  "wildguard": 0.398,
+  "llamaguard": 0.232,
+  "xstest_safe_refusal": 0.016,
+  "xstest_unsafe_harmful": 0.525,
+  "rouge_l": 0.2514953559695468
+ },
+ "safedemo8_0.3_s1": {
+  "beaverdam": 0.424,
+  "mdjudge": 0.392,
+  "wildguard": 0.45,
+  "llamaguard": 0.26,
+  "xstest_safe_refusal": 0.02,
+  "xstest_unsafe_harmful": 0.545,
+  "rouge_l": 0.24769474144525264
+ },
+ "safedemo8_0.3_s2": {
+  "beaverdam": 0.418,
+  "mdjudge": 0.382,
+  "wildguard": 0.442,
+  "llamaguard": 0.256,
+  "xstest_safe_refusal": 0.012,
+  "xstest_unsafe_harmful": 0.53,
+  "rouge_l": 0.24968218477597096
+ },
+ "safedemo8_0.45_s0": {
+  "beaverdam": 0.38,
+  "mdjudge": 0.336,
+  "wildguard": 0.382,
+  "llamaguard": 0.21,
+  "xstest_safe_refusal": 0.02,
+  "xstest_unsafe_harmful": 0.49,
+  "rouge_l": 0.2551879930004623
+ },
+ "safedemo8_0.45_s1": {
+  "beaverdam": 0.39,
+  "mdjudge": 0.362,
+  "wildguard": 0.408,
+  "llamaguard": 0.228,
+  "xstest_safe_refusal": 0.024,
+  "xstest_unsafe_harmful": 0.455,
+  "rouge_l": 0.2519868477734089
+ },
+ "safedemo8_0.45_s2": {
+  "beaverdam": 0.4,
+  "mdjudge": 0.378,
+  "wildguard": 0.422,
+  "llamaguard": 0.242,
+  "xstest_safe_refusal": 0.012,
+  "xstest_unsafe_harmful": 0.545,
+  "rouge_l": 0.24941213282662214
+ },
+ "safedemo8_0.545_s0": {
+  "beaverdam": 0.402,
+  "mdjudge": 0.366,
+  "wildguard": 0.404,
+  "llamaguard": 0.232,
+  "xstest_safe_refusal": 0.024,
+  "xstest_unsafe_harmful": 0.465,
+  "rouge_l": 0.25171039898849035
+ },
+ "safedemo8_0.545_s1": {
+  "beaverdam": 0.39,
+  "mdjudge": 0.362,
+  "wildguard": 0.394,
+  "llamaguard": 0.226,
+  "xstest_safe_refusal": 0.024,
+  "xstest_unsafe_harmful": 0.48,
+  "rouge_l": 0.2534409407123762
+ },
+ "safedemo8_0.545_s2": {
+  "beaverdam": 0.402,
+  "mdjudge": 0.372,
+  "wildguard": 0.396,
+  "llamaguard": 0.236,
+  "xstest_safe_refusal": 0.02,
+  "xstest_unsafe_harmful": 0.47,
+  "rouge_l": 0.2503898806500148
+ },
+ "safelen8_s0": {
+  "beaverdam": 0.352,
+  "mdjudge": 0.33,
+  "wildguard": 0.388,
+  "llamaguard": 0.192,
+  "xstest_safe_refusal": 0.028,
+  "xstest_unsafe_harmful": 0.375,
+  "rouge_l": 0.2511705303784918
+ },
+ "safelen8_s1": {
+  "beaverdam": 0.376,
+  "mdjudge": 0.354,
+  "wildguard": 0.386,
+  "llamaguard": 0.218,
+  "xstest_safe_refusal": 0.02,
+  "xstest_unsafe_harmful": 0.455,
+  "rouge_l": 0.2534910821819452
+ },
+ "safelen8_s2": {
+  "beaverdam": 0.376,
+  "mdjudge": 0.334,
+  "wildguard": 0.378,
+  "llamaguard": 0.206,
+  "xstest_safe_refusal": 0.02,
+  "xstest_unsafe_harmful": 0.43,
+  "rouge_l": 0.25592467923084383
+ },
+ "safetop8_s0": {
+  "beaverdam": 0.3,
+  "mdjudge": 0.278,
+  "wildguard": 0.324,
+  "llamaguard": 0.16,
+  "xstest_safe_refusal": 0.024,
+  "xstest_unsafe_harmful": 0.295,
+  "rouge_l": 0.25537379271136024
+ },
+ "safetop8_s1": {
+  "beaverdam": 0.288,
+  "mdjudge": 0.27,
+  "wildguard": 0.31,
+  "llamaguard": 0.154,
+  "xstest_safe_refusal": 0.024,
+  "xstest_unsafe_harmful": 0.285,
+  "rouge_l": 0.24878604383232916
+ },
+ "safetop8_s2": {
+  "beaverdam": 0.298,
+  "mdjudge": 0.26,
+  "wildguard": 0.312,
+  "llamaguard": 0.146,
+  "xstest_safe_refusal": 0.024,
+  "xstest_unsafe_harmful": 0.27,
+  "rouge_l": 0.2538416938365822
+ },
+ "saft15_s0": {
+  "beaverdam": 0.398,
+  "mdjudge": 0.364,
+  "wildguard": 0.428,
+  "llamaguard": 0.232,
+  "xstest_safe_refusal": 0.02,
+  "xstest_unsafe_harmful": 0.46,
+  "rouge_l": 0.24580282882491372
+ },
+ "saft15_s1": {
+  "beaverdam": 0.066,
+  "mdjudge": 0.06,
+  "wildguard": 0.038,
+  "llamaguard": 0.008,
+  "xstest_safe_refusal": 0.084,
+  "xstest_unsafe_harmful": 0.0,
+  "rouge_l": 0.11890162528382457
+ },
+ "saft15_s2": {
+  "beaverdam": 0.398,
+  "mdjudge": 0.378,
+  "wildguard": 0.426,
+  "llamaguard": 0.254,
+  "xstest_safe_refusal": 0.012,
+  "xstest_unsafe_harmful": 0.53,
+  "rouge_l": 0.25283732938001807
+ },
+ "saft_s0": {
+  "beaverdam": 0.41,
+  "mdjudge": 0.37,
+  "wildguard": 0.428,
+  "llamaguard": 0.232,
+  "xstest_safe_refusal": 0.02,
+  "xstest_unsafe_harmful": 0.48,
+  "rouge_l": 0.2434130168284473
+ },
+ "saft_s1": {
+  "beaverdam": 0.066,
+  "mdjudge": 0.06,
+  "wildguard": 0.04,
+  "llamaguard": 0.012,
+  "xstest_safe_refusal": 0.08,
+  "xstest_unsafe_harmful": 0.0,
+  "rouge_l": 0.11856728859902348
+ },
+ "saft_s2": {
+  "beaverdam": 0.406,
+  "mdjudge": 0.372,
+  "wildguard": 0.426,
+  "llamaguard": 0.248,
+  "xstest_safe_refusal": 0.012,
+  "xstest_unsafe_harmful": 0.53,
+  "rouge_l": 0.25102132517354214
+ },
+ "seal_long_s0": {
+  "beaverdam": 0.432,
+  "mdjudge": 0.4,
+  "wildguard": 0.438,
+  "llamaguard": 0.268,
+  "xstest_safe_refusal": 0.012,
+  "xstest_unsafe_harmful": 0.605,
+  "rouge_l": 0.2570534832384842
+ },
+ "seal_long_s1": {
+  "beaverdam": 0.44,
+  "mdjudge": 0.408,
+  "wildguard": 0.442,
+  "llamaguard": 0.262,
+  "xstest_safe_refusal": 0.016,
+  "xstest_unsafe_harmful": 0.585,
+  "rouge_l": 0.2537923099317404
+ },
+ "seal_long_s2": {
+  "beaverdam": 0.438,
+  "mdjudge": 0.404,
+  "wildguard": 0.45,
+  "llamaguard": 0.276,
+  "xstest_safe_refusal": 0.016,
+  "xstest_unsafe_harmful": 0.595,
+  "rouge_l": 0.24961335204140034
+ },
+ "seal_s0": {
+  "beaverdam": 0.454,
+  "mdjudge": 0.41,
+  "wildguard": 0.46,
+  "llamaguard": 0.27,
+  "xstest_safe_refusal": 0.012,
+  "xstest_unsafe_harmful": 0.58,
+  "rouge_l": 0.2555223830909445
+ },
+ "seal_s1": {
+  "beaverdam": 0.446,
+  "mdjudge": 0.406,
+  "wildguard": 0.458,
+  "llamaguard": 0.276,
+  "xstest_safe_refusal": 0.012,
+  "xstest_unsafe_harmful": 0.6,
+  "rouge_l": 0.25590879377812864
+ },
+ "seal_s2": {
+  "beaverdam": 0.456,
+  "mdjudge": 0.412,
+  "wildguard": 0.454,
+  "llamaguard": 0.276,
+  "xstest_safe_refusal": 0.012,
+  "xstest_unsafe_harmful": 0.585,
+  "rouge_l": 0.25568094097561705
+ }
+}

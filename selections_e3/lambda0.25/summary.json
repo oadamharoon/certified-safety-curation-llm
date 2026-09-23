@@ -1,0 +1,804 @@
+{
+ "full": {
+  "0": {
+   "n": 3000,
+   "unsafe_frac": 0.25,
+   "safety_demo_share": 0.409
+  },
+  "1": {
+   "n": 3000,
+   "unsafe_frac": 0.25,
+   "safety_demo_share": 0.409
+  },
+  "2": {
+   "n": 3000,
+   "unsafe_frac": 0.25,
+   "safety_demo_share": 0.409
+  }
+ },
+ "oracle": {
+  "0": {
+   "n": 2250,
+   "unsafe_frac": 0.0,
+   "safety_demo_share": 0.5453333333333333
+  },
+  "1": {
+   "n": 2250,
+   "unsafe_frac": 0.0,
+   "safety_demo_share": 0.5453333333333333
+  },
+  "2": {
+   "n": 2250,
+   "unsafe_frac": 0.0,
+   "safety_demo_share": 0.5453333333333333
+  }
+ },
+ "prompting": {
+  "0": {
+   "rule": "SAFT Prompting baseline",
+   "n": 2594,
+   "unsafe_frac": 0.2764070932922128,
+   "safety_demo_share": 0.34772552043176563
+  },
+  "1": {
+   "rule": "SAFT Prompting baseline",
+   "n": 2594,
+   "unsafe_frac": 0.2764070932922128,
+   "safety_demo_share": 0.34772552043176563
+  },
+  "2": {
+   "rule": "SAFT Prompting baseline",
+   "n": 2594,
+   "unsafe_frac": 0.2764070932922128,
+   "safety_demo_share": 0.34772552043176563
+  }
+ },
+ "certlg": {
+  "0": {
+   "certified": false,
+   "cp_lower_bound": 0.7252754942707926,
+   "n": 2176,
+   "unsafe_frac": 0.09972426470588236,
+   "safety_demo_share": 0.4443933823529412
+  },
+  "1": {
+   "certified": true,
+   "q": 0.85,
+   "n": 464,
+   "unsafe_frac": 0.05387931034482758,
+   "safety_demo_share": 0.13793103448275862
+  },
+  "2": {
+   "certified": true,
+   "q": 0.3,
+   "n": 2112,
+   "unsafe_frac": 0.09659090909090909,
+   "safety_demo_share": 0.43892045454545453
+  }
+ },
+ "random": {
+  "0": {
+   "rule": "uniform at certlg size",
+   "n": 2176,
+   "unsafe_frac": 0.24816176470588236,
+   "safety_demo_share": 0.40808823529411764
+  },
+  "1": {
+   "rule": "uniform at certlg size",
+   "n": 464,
+   "unsafe_frac": 0.2521551724137931,
+   "safety_demo_share": 0.4267241379310345
+  },
+  "2": {
+   "rule": "uniform at certlg size",
+   "n": 2112,
+   "unsafe_frac": 0.24952651515151514,
+   "safety_demo_share": 0.4109848484848485
+  }
+ },
+ "certstrat2": {
+  "0": {
+   "certified": false,
+   "overall_bound": 0.17926255230125523,
+   "n": 1912,
+   "unsafe_frac": 0.10198744769874477,
+   "safety_demo_share": 0.5057531380753139
+  },
+  "1": {
+   "certified": true,
+   "overall_bound": 0.17957238536836684,
+   "n": 1941,
+   "unsafe_frac": 0.10200927357032458,
+   "safety_demo_share": 0.5115919629057187
+  },
+  "2": {
+   "certified": false,
+   "overall_bound": 0.18009538152610444,
+   "n": 1992,
+   "unsafe_frac": 0.10742971887550201,
+   "safety_demo_share": 0.5160642570281124
+  }
+ },
+ "anti": {
+  "0": {
+   "rule": "top 2176 by Prompting 'Yes' log-odds (judge's rejects)",
+   "n": 2176,
+   "unsafe_frac": 0.18887867647058823,
+   "safety_demo_share": 0.5078125
+  },
+  "1": {
+   "rule": "top 2176 by Prompting 'Yes' log-odds (judge's rejects)",
+   "n": 2176,
+   "unsafe_frac": 0.18887867647058823,
+   "safety_demo_share": 0.5078125
+  },
+  "2": {
+   "rule": "top 2176 by Prompting 'Yes' log-odds (judge's rejects)",
+   "n": 2176,
+   "unsafe_frac": 0.18887867647058823,
+   "safety_demo_share": 0.5078125
+  }
+ },
+ "saft": {
+  "0": {
+   "rule": "SAFT: keep s_i <= tau",
+   "layer": 15,
+   "k": 1,
+   "tau": 1.034386649541557,
+   "val_f1": 0.43478260869565216,
+   "flagged_frac": 0.6653333333333333,
+   "flag_recall_unsafe": 0.7066666666666667,
+   "flag_rate_safe": 0.6515555555555556,
+   "n": 1004,
+   "unsafe_frac": 0.21912350597609562,
+   "safety_demo_share": 0.5348605577689243
+  },
+  "1": {
+   "rule": "SAFT: keep s_i <= tau",
+   "layer": 32,
+   "k": 3,
+   "tau": 118.01321614742278,
+   "val_f1": 0.5151515151515151,
+   "flagged_frac": 0.9896666666666667,
+   "flag_recall_unsafe": 0.9813333333333333,
+   "flag_rate_safe": 0.9924444444444445,
+   "n": 31,
+   "unsafe_frac": 0.45161290322580644,
+   "safety_demo_share": 0.41935483870967744
+  },
+  "2": {
+   "rule": "SAFT: keep s_i <= tau",
+   "layer": 15,
+   "k": 2,
+   "tau": 4.284315970242023,
+   "val_f1": 0.4444444444444444,
+   "flagged_frac": 0.16033333333333333,
+   "flag_recall_unsafe": 0.256,
+   "flag_rate_safe": 0.12844444444444444,
+   "n": 2519,
+   "unsafe_frac": 0.22151647479158396,
+   "safety_demo_share": 0.4192139737991266
+  }
+ },
+ "certsaft": {
+  "0": {
+   "certified": false,
+   "cp_lower_bound": 0.7252754942707924,
+   "layer": 15,
+   "k": 1,
+   "n": 2176,
+   "unsafe_frac": 0.22150735294117646,
+   "safety_demo_share": 0.4508272058823529
+  },
+  "1": {
+   "certified": false,
+   "cp_lower_bound": 0.7356258669579948,
+   "layer": 32,
+   "k": 3,
+   "n": 2207,
+   "unsafe_frac": 0.1993656547349343,
+   "safety_demo_share": 0.4019030357951971
+  },
+  "2": {
+   "certified": false,
+   "cp_lower_bound": 0.7459970479903983,
+   "layer": 15,
+   "k": 2,
+   "n": 2238,
+   "unsafe_frac": 0.21805183199285075,
+   "safety_demo_share": 0.4387846291331546
+  }
+ },
+ "saft15": {
+  "0": {
+   "rule": "SAFT: keep s_i <= tau",
+   "layer": 15,
+   "k": 1,
+   "tau": 1.034386649541557,
+   "val_f1": 0.43478260869565216,
+   "flagged_frac": 0.6653333333333333,
+   "flag_recall_unsafe": 0.7066666666666667,
+   "flag_rate_safe": 0.6515555555555556,
+   "n": 1004,
+   "unsafe_frac": 0.21912350597609562,
+   "safety_demo_share": 0.5348605577689243
+  },
+  "1": {
+   "rule": "SAFT: keep s_i <= tau",
+   "layer": 15,
+   "k": 1,
+   "tau": 0.002408835105597973,
+   "val_f1": 0.49624060150375937,
+   "flagged_frac": 0.9886666666666667,
+   "flag_recall_unsafe": 0.9893333333333333,
+   "flag_rate_safe": 0.9884444444444445,
+   "n": 34,
+   "unsafe_frac": 0.23529411764705882,
+   "safety_demo_share": 0.5882352941176471
+  },
+  "2": {
+   "rule": "SAFT: keep s_i <= tau",
+   "layer": 15,
+   "k": 2,
+   "tau": 4.284315970242023,
+   "val_f1": 0.4444444444444444,
+   "flagged_frac": 0.16033333333333333,
+   "flag_recall_unsafe": 0.256,
+   "flag_rate_safe": 0.12844444444444444,
+   "n": 2519,
+   "unsafe_frac": 0.22151647479158396,
+   "safety_demo_share": 0.4192139737991266
+  }
+ },
+ "seal": {
+  "0": {
+   "rule": "SEAL top-p 0.8 by selector logit",
+   "n": 2400,
+   "unsafe_frac": 0.24416666666666667,
+   "safety_demo_share": 0.405
+  },
+  "1": {
+   "rule": "SEAL top-p 0.8 by selector logit",
+   "n": 2400,
+   "unsafe_frac": 0.24416666666666667,
+   "safety_demo_share": 0.405
+  },
+  "2": {
+   "rule": "SEAL top-p 0.8 by selector logit",
+   "n": 2400,
+   "unsafe_frac": 0.24416666666666667,
+   "safety_demo_share": 0.405
+  }
+ },
+ "certseal": {
+  "0": {
+   "certified": false,
+   "cp_lower_bound": 0.7252754942707926,
+   "n": 2176,
+   "unsafe_frac": 0.24402573529411764,
+   "safety_demo_share": 0.40487132352941174
+  },
+  "1": {
+   "certified": false,
+   "cp_lower_bound": 0.7356258669579947,
+   "n": 2207,
+   "unsafe_frac": 0.24422292705029452,
+   "safety_demo_share": 0.4055278658812868
+  },
+  "2": {
+   "certified": false,
+   "cp_lower_bound": 0.7459970479903983,
+   "n": 2238,
+   "unsafe_frac": 0.24441465594280606,
+   "safety_demo_share": 0.4052725647899911
+  }
+ },
+ "seal_long": {
+  "0": {
+   "rule": "SEAL top-p 0.8 by selector logit",
+   "n": 2400,
+   "unsafe_frac": 0.22625,
+   "safety_demo_share": 0.4166666666666667
+  },
+  "1": {
+   "rule": "SEAL top-p 0.8 by selector logit",
+   "n": 2400,
+   "unsafe_frac": 0.22625,
+   "safety_demo_share": 0.4166666666666667
+  },
+  "2": {
+   "rule": "SEAL top-p 0.8 by selector logit",
+   "n": 2400,
+   "unsafe_frac": 0.22625,
+   "safety_demo_share": 0.4166666666666667
+  }
+ },
+ "certseal_long": {
+  "0": {
+   "certified": false,
+   "cp_lower_bound": 0.7252754942707926,
+   "n": 2176,
+   "unsafe_frac": 0.21691176470588236,
+   "safety_demo_share": 0.42371323529411764
+  },
+  "1": {
+   "certified": false,
+   "cp_lower_bound": 0.7356258669579947,
+   "n": 2207,
+   "unsafe_frac": 0.21748980516538288,
+   "safety_demo_share": 0.4231989125509742
+  },
+  "2": {
+   "certified": false,
+   "cp_lower_bound": 0.7459970479903983,
+   "n": 2238,
+   "unsafe_frac": 0.21715817694369974,
+   "safety_demo_share": 0.42359249329758714
+  }
+ },
+ "certprompt": {
+  "0": {
+   "certified": false,
+   "cp_lower_bound": 0.7252754942707924,
+   "scorer": "Prompting judge",
+   "n": 2176,
+   "unsafe_frac": 0.30422794117647056,
+   "safety_demo_share": 0.28722426470588236
+  },
+  "1": {
+   "certified": false,
+   "cp_lower_bound": 0.7356258669579948,
+   "scorer": "Prompting judge",
+   "n": 2207,
+   "unsafe_frac": 0.3013140009062075,
+   "safety_demo_share": 0.29225192569098324
+  },
+  "2": {
+   "certified": false,
+   "cp_lower_bound": 0.7459970479903983,
+   "scorer": "Prompting judge",
+   "n": 2238,
+   "unsafe_frac": 0.2998212689901698,
+   "safety_demo_share": 0.29624664879356566
+  }
+ },
+ "certstrat_saft": {
+  "0": {
+   "certified": false,
+   "overall_bound": 0.19175373134328358,
+   "layer": 15,
+   "k": 1,
+   "n": 1340,
+   "unsafe_frac": 0.25671641791044775,
+   "safety_demo_share": 0.5985074626865672
+  },
+  "1": {
+   "certified": false,
+   "overall_bound": 0.17616279069767443,
+   "layer": 32,
+   "k": 3,
+   "n": 2064,
+   "unsafe_frac": 0.18992248062015504,
+   "safety_demo_share": 0.3682170542635659
+  },
+  "2": {
+   "certified": false,
+   "overall_bound": 0.17736193518941124,
+   "layer": 15,
+   "k": 2,
+   "n": 2191,
+   "unsafe_frac": 0.19169329073482427,
+   "safety_demo_share": 0.3911455956184391
+  }
+ },
+ "certstrat_seal": {
+  "0": {
+   "certified": false,
+   "overall_bound": 0.17957188160676532,
+   "selector": "seal_scores_long.json",
+   "n": 1892,
+   "unsafe_frac": 0.20084566596194503,
+   "safety_demo_share": 0.41701902748414377
+  },
+  "1": {
+   "certified": false,
+   "overall_bound": 0.17914193200215867,
+   "selector": "seal_scores_long.json",
+   "n": 1853,
+   "unsafe_frac": 0.19481921208850514,
+   "safety_demo_share": 0.41500269832703723
+  },
+  "2": {
+   "certified": false,
+   "overall_bound": 0.18040060851926978,
+   "selector": "seal_scores_long.json",
+   "n": 1972,
+   "unsafe_frac": 0.2063894523326572,
+   "safety_demo_share": 0.42697768762677485
+  }
+ },
+ "lgfilter": {
+  "0": {
+   "rule": "keep all not flagged by Llama Guard 3, no labels",
+   "scorer": "Llama-Guard-3-8B",
+   "n": 2529,
+   "unsafe_frac": 0.13404507710557534,
+   "safety_demo_share": 0.4626334519572954
+  },
+  "1": {
+   "rule": "keep all not flagged by Llama Guard 3, no labels",
+   "scorer": "Llama-Guard-3-8B",
+   "n": 2529,
+   "unsafe_frac": 0.13404507710557534,
+   "safety_demo_share": 0.4626334519572954
+  },
+  "2": {
+   "rule": "keep all not flagged by Llama Guard 3, no labels",
+   "scorer": "Llama-Guard-3-8B",
+   "n": 2529,
+   "unsafe_frac": 0.13404507710557534,
+   "safety_demo_share": 0.4626334519572954
+  }
+ },
+ "labels": {
+  "0": {
+   "rule": "labeled-safe among the 400 calibration draws",
+   "n": 302,
+   "unsafe_frac": 0.0,
+   "safety_demo_share": 0.5529801324503312
+  },
+  "1": {
+   "rule": "labeled-safe among the 400 calibration draws",
+   "n": 306,
+   "unsafe_frac": 0.0,
+   "safety_demo_share": 0.5359477124183006
+  },
+  "2": {
+   "rule": "labeled-safe among the 400 calibration draws",
+   "n": 310,
+   "unsafe_frac": 0.0,
+   "safety_demo_share": 0.5290322580645161
+  }
+ },
+ "certstrat_prompt": {
+  "0": {
+   "certified": false,
+   "overall_bound": 0.17954065469904962,
+   "scorer": "Prompting judge",
+   "n": 1894,
+   "unsafe_frac": 0.3273495248152059,
+   "safety_demo_share": 0.29039070749736007
+  },
+  "1": {
+   "certified": false,
+   "overall_bound": 0.17911051212938006,
+   "scorer": "Prompting judge",
+   "n": 1855,
+   "unsafe_frac": 0.3283018867924528,
+   "safety_demo_share": 0.28140161725067386
+  },
+  "2": {
+   "certified": false,
+   "overall_bound": 0.18036980749746706,
+   "scorer": "Prompting judge",
+   "n": 1974,
+   "unsafe_frac": 0.32370820668693007,
+   "safety_demo_share": 0.30952380952380953
+  }
+ },
+ "safedemo8_0.3": {
+  "0": {
+   "n": 1584,
+   "unsafe_frac": 0.08333333333333333,
+   "safety_demo_share": 0.27525252525252525,
+   "safety_demo_share_safe": 0.3,
+   "rule": "stratified uniform by WildGuard harmful-prompt label, no scorer",
+   "n_harmful": 132
+  },
+  "1": {
+   "n": 1584,
+   "unsafe_frac": 0.08333333333333333,
+   "safety_demo_share": 0.27525252525252525,
+   "safety_demo_share_safe": 0.3,
+   "rule": "stratified uniform by WildGuard harmful-prompt label, no scorer",
+   "n_harmful": 132
+  },
+  "2": {
+   "n": 1584,
+   "unsafe_frac": 0.08333333333333333,
+   "safety_demo_share": 0.27525252525252525,
+   "safety_demo_share_safe": 0.3,
+   "rule": "stratified uniform by WildGuard harmful-prompt label, no scorer",
+   "n_harmful": 132
+  }
+ },
+ "safedemo8_0.37": {
+  "0": {
+   "n": 1584,
+   "unsafe_frac": 0.08333333333333333,
+   "safety_demo_share": 0.3390151515151515,
+   "safety_demo_share_safe": 0.37,
+   "rule": "stratified uniform by WildGuard harmful-prompt label, no scorer",
+   "n_harmful": 132
+  },
+  "1": {
+   "n": 1584,
+   "unsafe_frac": 0.08333333333333333,
+   "safety_demo_share": 0.3390151515151515,
+   "safety_demo_share_safe": 0.37,
+   "rule": "stratified uniform by WildGuard harmful-prompt label, no scorer",
+   "n_harmful": 132
+  },
+  "2": {
+   "n": 1584,
+   "unsafe_frac": 0.08333333333333333,
+   "safety_demo_share": 0.3390151515151515,
+   "safety_demo_share_safe": 0.37,
+   "rule": "stratified uniform by WildGuard harmful-prompt label, no scorer",
+   "n_harmful": 132
+  }
+ },
+ "safedemo8_0.45": {
+  "0": {
+   "n": 1584,
+   "unsafe_frac": 0.08333333333333333,
+   "safety_demo_share": 0.41224747474747475,
+   "safety_demo_share_safe": 0.45,
+   "rule": "stratified uniform by WildGuard harmful-prompt label, no scorer",
+   "n_harmful": 132
+  },
+  "1": {
+   "n": 1584,
+   "unsafe_frac": 0.08333333333333333,
+   "safety_demo_share": 0.41224747474747475,
+   "safety_demo_share_safe": 0.45,
+   "rule": "stratified uniform by WildGuard harmful-prompt label, no scorer",
+   "n_harmful": 132
+  },
+  "2": {
+   "n": 1584,
+   "unsafe_frac": 0.08333333333333333,
+   "safety_demo_share": 0.41224747474747475,
+   "safety_demo_share_safe": 0.45,
+   "rule": "stratified uniform by WildGuard harmful-prompt label, no scorer",
+   "n_harmful": 132
+  }
+ },
+ "safedemo8_0.545": {
+  "0": {
+   "n": 1584,
+   "unsafe_frac": 0.08333333333333333,
+   "safety_demo_share": 0.49936868686868685,
+   "safety_demo_share_safe": 0.545,
+   "rule": "stratified uniform by WildGuard harmful-prompt label, no scorer",
+   "n_harmful": 132
+  },
+  "1": {
+   "n": 1584,
+   "unsafe_frac": 0.08333333333333333,
+   "safety_demo_share": 0.49936868686868685,
+   "safety_demo_share_safe": 0.545,
+   "rule": "stratified uniform by WildGuard harmful-prompt label, no scorer",
+   "n_harmful": 132
+  },
+  "2": {
+   "n": 1584,
+   "unsafe_frac": 0.08333333333333333,
+   "safety_demo_share": 0.49936868686868685,
+   "safety_demo_share_safe": 0.545,
+   "rule": "stratified uniform by WildGuard harmful-prompt label, no scorer",
+   "n_harmful": 132
+  }
+ },
+ "oracle_matched": {
+  "0": {
+   "rule": "uniform among human-safe examples at certlg's size, no scorer",
+   "n": 2176,
+   "unsafe_frac": 0.0,
+   "safety_demo_share": 0.5464154411764706
+  },
+  "1": {
+   "rule": "uniform among human-safe examples at certlg's size, no scorer",
+   "n": 464,
+   "unsafe_frac": 0.0,
+   "safety_demo_share": 0.5387931034482759
+  },
+  "2": {
+   "rule": "uniform among human-safe examples at certlg's size, no scorer",
+   "n": 2112,
+   "unsafe_frac": 0.0,
+   "safety_demo_share": 0.5445075757575758
+  }
+ },
+ "harmtop8": {
+  "0": {
+   "rule": "stratified uniform safe part (demo share .37), harmful examples from the top third of the harmful stratum by Llama Guard 3 score",
+   "safety_demo_share_safe": 0.37,
+   "harmful_lg_score_mean": 7.0227272727272725,
+   "n": 1584,
+   "unsafe_frac": 0.08333333333333333,
+   "safety_demo_share": 0.3390151515151515,
+   "n_harmful": 132
+  },
+  "1": {
+   "rule": "stratified uniform safe part (demo share .37), harmful examples from the top third of the harmful stratum by Llama Guard 3 score",
+   "safety_demo_share_safe": 0.37,
+   "harmful_lg_score_mean": 6.8977272727272725,
+   "n": 1584,
+   "unsafe_frac": 0.08333333333333333,
+   "safety_demo_share": 0.3390151515151515,
+   "n_harmful": 132
+  },
+  "2": {
+   "rule": "stratified uniform safe part (demo share .37), harmful examples from the top third of the harmful stratum by Llama Guard 3 score",
+   "safety_demo_share_safe": 0.37,
+   "harmful_lg_score_mean": 6.944128787878788,
+   "n": 1584,
+   "unsafe_frac": 0.08333333333333333,
+   "safety_demo_share": 0.3390151515151515,
+   "n_harmful": 132
+  }
+ },
+ "harmmid8": {
+  "0": {
+   "rule": "stratified uniform safe part (demo share .37), harmful examples from the mid third of the harmful stratum by Llama Guard 3 score",
+   "safety_demo_share_safe": 0.37,
+   "harmful_lg_score_mean": -1.8882575757575757,
+   "n": 1584,
+   "unsafe_frac": 0.08333333333333333,
+   "safety_demo_share": 0.3390151515151515,
+   "n_harmful": 132
+  },
+  "1": {
+   "rule": "stratified uniform safe part (demo share .37), harmful examples from the mid third of the harmful stratum by Llama Guard 3 score",
+   "safety_demo_share_safe": 0.37,
+   "harmful_lg_score_mean": -1.6884469696969697,
+   "n": 1584,
+   "unsafe_frac": 0.08333333333333333,
+   "safety_demo_share": 0.3390151515151515,
+   "n_harmful": 132
+  },
+  "2": {
+   "rule": "stratified uniform safe part (demo share .37), harmful examples from the mid third of the harmful stratum by Llama Guard 3 score",
+   "safety_demo_share_safe": 0.37,
+   "harmful_lg_score_mean": -1.5672348484848484,
+   "n": 1584,
+   "unsafe_frac": 0.08333333333333333,
+   "safety_demo_share": 0.3390151515151515,
+   "n_harmful": 132
+  }
+ },
+ "harmbot8": {
+  "0": {
+   "rule": "stratified uniform safe part (demo share .37), harmful examples from the bot third of the harmful stratum by Llama Guard 3 score",
+   "safety_demo_share_safe": 0.37,
+   "harmful_lg_score_mean": -8.078598484848484,
+   "n": 1584,
+   "unsafe_frac": 0.08333333333333333,
+   "safety_demo_share": 0.3390151515151515,
+   "n_harmful": 132
+  },
+  "1": {
+   "rule": "stratified uniform safe part (demo share .37), harmful examples from the bot third of the harmful stratum by Llama Guard 3 score",
+   "safety_demo_share_safe": 0.37,
+   "harmful_lg_score_mean": -8.082386363636363,
+   "n": 1584,
+   "unsafe_frac": 0.08333333333333333,
+   "safety_demo_share": 0.3390151515151515,
+   "n_harmful": 132
+  },
+  "2": {
+   "rule": "stratified uniform safe part (demo share .37), harmful examples from the bot third of the harmful stratum by Llama Guard 3 score",
+   "safety_demo_share_safe": 0.37,
+   "harmful_lg_score_mean": -8.150568181818182,
+   "n": 1584,
+   "unsafe_frac": 0.08333333333333333,
+   "safety_demo_share": 0.3390151515151515,
+   "n_harmful": 132
+  }
+ },
+ "safetop8": {
+  "0": {
+   "rule": "safe examples = top of Llama Guard 3's within-safe ranking per stratum; harmful = top third",
+   "safety_demo_share_safe": 0.37,
+   "n": 1584,
+   "n_harmful": 132,
+   "unsafe_frac": 0.08333333333333333,
+   "safety_demo_share": 0.3390151515151515,
+   "safe_lg_mean": 8.882403581267218,
+   "safe_len_mean": 323.7651515151515
+  },
+  "1": {
+   "rule": "safe examples = top of Llama Guard 3's within-safe ranking per stratum; harmful = top third",
+   "safety_demo_share_safe": 0.37,
+   "n": 1584,
+   "n_harmful": 132,
+   "unsafe_frac": 0.08333333333333333,
+   "safety_demo_share": 0.3390151515151515,
+   "safe_lg_mean": 8.882403581267218,
+   "safe_len_mean": 323.7651515151515
+  },
+  "2": {
+   "rule": "safe examples = top of Llama Guard 3's within-safe ranking per stratum; harmful = top third",
+   "safety_demo_share_safe": 0.37,
+   "n": 1584,
+   "n_harmful": 132,
+   "unsafe_frac": 0.08333333333333333,
+   "safety_demo_share": 0.3390151515151515,
+   "safe_lg_mean": 8.882403581267218,
+   "safe_len_mean": 323.7651515151515
+  }
+ },
+ "safelen8": {
+  "0": {
+   "rule": "safe examples score-blind, length-matched to certlg's safe examples by decile per stratum; harmful = top third",
+   "safety_demo_share_safe": 0.37,
+   "n": 1584,
+   "n_harmful": 132,
+   "unsafe_frac": 0.08333333333333333,
+   "safety_demo_share": 0.3611111111111111,
+   "safe_lg_mean": 7.619059917355372,
+   "safe_len_mean": 331.7926997245179
+  },
+  "1": {
+   "rule": "safe examples score-blind, length-matched to certlg's safe examples by decile per stratum; harmful = top third",
+   "safety_demo_share_safe": 0.37,
+   "n": 1584,
+   "n_harmful": 132,
+   "unsafe_frac": 0.08333333333333333,
+   "safety_demo_share": 0.3952020202020202,
+   "safe_lg_mean": 7.560175619834711,
+   "safe_len_mean": 298.767217630854
+  },
+  "2": {
+   "rule": "safe examples score-blind, length-matched to certlg's safe examples by decile per stratum; harmful = top third",
+   "safety_demo_share_safe": 0.37,
+   "n": 1584,
+   "n_harmful": 132,
+   "unsafe_frac": 0.08333333333333333,
+   "safety_demo_share": 0.3573232323232323,
+   "safe_lg_mean": 7.646263774104683,
+   "safe_len_mean": 332.3443526170799
+  }
+ },
+ "labels800_8": {
+  "0": {
+   "rule": "human-safe among the 800 calibration draws of certstrat2",
+   "n": 596,
+   "unsafe_frac": 0.0,
+   "safety_demo_share": 0.5385906040268457
+  },
+  "1": {
+   "rule": "human-safe among the 800 calibration draws of certstrat2",
+   "n": 582,
+   "unsafe_frac": 0.0,
+   "safety_demo_share": 0.5154639175257731
+  },
+  "2": {
+   "rule": "human-safe among the 800 calibration draws of certstrat2",
+   "n": 608,
+   "unsafe_frac": 0.0,
+   "safety_demo_share": 0.569078947368421
+  }
+ },
+ "randdemo8": {
+  "0": {
+   "rule": "random (certlg size) plus the safety demonstrations among the 800 labels",
+   "n": 2274,
+   "unsafe_frac": 0.23746701846965698,
+   "safety_demo_share": 0.4335971855760774
+  },
+  "1": {
+   "rule": "random (certlg size) plus the safety demonstrations among the 800 labels",
+   "n": 714,
+   "unsafe_frac": 0.1638655462184874,
+   "safety_demo_share": 0.6274509803921569
+  },
+  "2": {
+   "rule": "random (certlg size) plus the safety demonstrations among the 800 labels",
+   "n": 2219,
+   "unsafe_frac": 0.23749436683190625,
+   "safety_demo_share": 0.4393871113114015
+  }
+ }
+}

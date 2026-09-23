@@ -1,0 +1,23 @@
+\begin{tabular}{lccccccc}
+\toprule
+ & \multicolumn{4}{c}{beaver-dam} & \multicolumn{3}{c}{all three sets} \\
+\cmidrule(lr){2-5}\cmidrule(lr){6-8}
+training set & DirectHarm4 & HarmBench & HEx-PHI & all three & MD-Judge & WildGuard & Llama Guard 3 \\
+\midrule
+No fine-tuning & 0.705 & 0.580 & 0.713 & 0.680 & 0.822 & 0.866 & 0.830 \\
+Full pool & 0.681 $\pm$ 0.003 & 0.551 $\pm$ 0.010 & 0.701 $\pm$ 0.006 & 0.659 $\pm$ 0.002 & 0.807 $\pm$ 0.001 & 0.853 $\pm$ 0.004 & 0.818 $\pm$ 0.002 \\
+Random, size of certified & 0.659 $\pm$ 0.005 & 0.544 $\pm$ 0.010 & 0.703 $\pm$ 0.003 & 0.648 $\pm$ 0.003 & 0.797 $\pm$ 0.001 & 0.845 $\pm$ 0.004 & 0.808 $\pm$ 0.002 \\
+Fixed cutoff, judge & 0.683 $\pm$ 0.005 & 0.535 $\pm$ 0.006 & 0.696 $\pm$ 0.001 & 0.654 $\pm$ 0.002 & 0.801 $\pm$ 0.001 & 0.849 $\pm$ 0.005 & 0.819 $\pm$ 0.002 \\
+Judge's rejects & 0.665 $\pm$ 0.006 & 0.567 $\pm$ 0.004 & 0.691 $\pm$ 0.006 & 0.652 $\pm$ 0.004 & 0.805 $\pm$ 0.002 & 0.849 $\pm$ 0.002 & 0.807 $\pm$ 0.002 \\
+Certified, judge & 0.657 $\pm$ 0.003 & 0.541 $\pm$ 0.006 & 0.693 $\pm$ 0.008 & 0.643 $\pm$ 0.004 & 0.801 $\pm$ 0.004 & 0.846 $\pm$ 0.005 & 0.812 $\pm$ 0.003 \\
+Fixed cutoff, Llama Guard 3 & 0.653 $\pm$ 0.003 & 0.547 $\pm$ 0.009 & 0.670 $\pm$ 0.002 & 0.635 $\pm$ 0.003 & 0.778 $\pm$ 0.006 & 0.823 $\pm$ 0.001 & \textcolor{gray}{0.795 $\pm$ 0.004} \\
+Certified, Llama Guard 3 & 0.649 $\pm$ 0.004 & 0.546 $\pm$ 0.008 & 0.665 $\pm$ 0.003 & 0.632 $\pm$ 0.002 & 0.773 $\pm$ 0.005 & 0.820 $\pm$ 0.002 & \textcolor{gray}{0.780 $\pm$ 0.003} \\
+Stratified certified, Llama Guard 3 & 0.655 $\pm$ 0.011 & 0.543 $\pm$ 0.003 & \textbf{0.657 $\pm$ 0.003} & 0.631 $\pm$ 0.004 & 0.762 $\pm$ 0.003 & 0.811 $\pm$ 0.004 & \textcolor{gray}{0.777 $\pm$ 0.004} \\
+Stratified certified, judge & 0.661 $\pm$ 0.010 & 0.543 $\pm$ 0.022 & 0.681 $\pm$ 0.014 & 0.641 $\pm$ 0.005 & 0.798 $\pm$ 0.005 & 0.841 $\pm$ 0.003 & 0.808 $\pm$ 0.002 \\
+SAFT & 0.667 $\pm$ 0.004 & 0.547 $\pm$ 0.004 & 0.698 $\pm$ 0.003 & 0.650 $\pm$ 0.002 & 0.805 $\pm$ 0.002 & 0.850 $\pm$ 0.004 & 0.822 $\pm$ 0.005 \\
+Certified, SAFT score & 0.679 $\pm$ 0.002 & 0.548 $\pm$ 0.007 & 0.701 $\pm$ 0.004 & 0.657 $\pm$ 0.002 & 0.809 $\pm$ 0.006 & 0.856 $\pm$ 0.005 & 0.829 $\pm$ 0.006 \\
+Stratified certified, SAFT score & 0.672 $\pm$ 0.003 & 0.562 $\pm$ 0.011 & 0.696 $\pm$ 0.007 & 0.656 $\pm$ 0.003 & 0.803 $\pm$ 0.005 & 0.853 $\pm$ 0.008 & 0.820 $\pm$ 0.005 \\
+Labeled-safe only & \textbf{0.641 $\pm$ 0.006} & \textbf{0.503 $\pm$ 0.007} & 0.672 $\pm$ 0.004 & \textbf{0.621 $\pm$ 0.005} & \textbf{0.756 $\pm$ 0.004} & \textbf{0.799 $\pm$ 0.008} & \textbf{0.776 $\pm$ 0.007} \\
+Oracle, all safe & 0.645 $\pm$ 0.005 & 0.534 $\pm$ 0.008 & 0.654 $\pm$ 0.003 & 0.624 $\pm$ 0.003 & 0.752 $\pm$ 0.002 & 0.803 $\pm$ 0.003 & 0.771 $\pm$ 0.003 \\
+\bottomrule
+\end{tabular}

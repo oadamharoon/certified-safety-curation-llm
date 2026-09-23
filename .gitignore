@@ -1,0 +1,47 @@
+# Fine-tuned model weights and raw generations: hundreds of GB, regenerable from the code.
+results/models/
+results/models_e3/
+results/seal/
+results/gen/
+results/gen_e3/
+results/gen_xstest/
+results/gen_harmsets/
+selections_e3/*/saft_embeddings.npz
+
+# Datasets: public, fetched by scripts/common.py (HEx-PHI needs its authors' access form).
+/data/
+
+# Run logs and vendored third-party checkouts.
+/logs/
+/third_party/
+/lit/
+
+# Paper build products and working snapshots. paper/paper.tex is the source; paper_anonymous.tex
+# is the anonymous build that ships in the supplementary archive.
+paper/*.pdf
+paper/*.aux
+paper/*.bbl
+paper/*.blg
+paper/*.log
+paper/*.out
+paper/paper_certified_*.tex
+paper/backups/
+paper/backups_*
+paper/draft_*.pdf
+
+# Release staging.
+/release/
+certified-safety-curation-llm*.zip
+
+__pycache__/
+*.pyc
+paper/paper_anonymous.tex
+results/harmsets_scores.json
+
+# Internal working notes, not part of the code release.
+PLAN.md
+RELATED_WORK.md
+EXPERIMENT_MATRIX.md
+FIGURES.md
+PREREGISTRATION.md
+CLAIMS.md

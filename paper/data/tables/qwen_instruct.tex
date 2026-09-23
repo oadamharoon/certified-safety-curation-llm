@@ -1,0 +1,16 @@
+\begin{tabular}{llrccccccccc}
+\toprule
+training set & scorer & labels & harmful & demos & cert. & beaver-dam & MD-Judge & WildGuard & Llama Guard 3 & XSTest-unsafe & ROUGE-L \\
+\midrule
+No fine-tuning & -- & -- & -- & -- & -- & 0.116 & 0.136 & 0.082 & 0.052 & 0.035 & 0.117 \\
+Full pool & -- & 0 & 0.250 & 0.41 & -- & 0.422 $\pm$ 0.002 & 0.415 $\pm$ 0.004 & 0.437 $\pm$ 0.004 & 0.262 $\pm$ 0.004 & 0.527 $\pm$ 0.007 & 0.194 $\pm$ 0.001 \\
+Random, size of certified & -- & 0 & 0.250 & 0.40 & -- & 0.431 $\pm$ 0.004 & 0.419 $\pm$ 0.001 & 0.438 $\pm$ 0.005 & 0.263 $\pm$ 0.003 & 0.518 $\pm$ 0.002 & 0.190 $\pm$ 0.002 \\
+Bottom 35\% by judge (its rejects) & Qwen-7B & 0 & 0.453 & 0.50 & -- & 0.424 $\pm$ 0.006 & 0.407 $\pm$ 0.007 & 0.449 $\pm$ 0.003 & 0.261 $\pm$ 0.002 & 0.545 $\pm$ 0.012 & 0.196 $\pm$ 0.001 \\
+Certified, $\alpha{=}.10$, $n{=}400$ & Qwen-7B & 400 & 0.072 & 0.23 & 5/5 & 0.421 $\pm$ 0.001 & 0.403 $\pm$ 0.002 & 0.423 $\pm$ 0.003 & 0.250 $\pm$ 0.000 & 0.452 $\pm$ 0.014 & 0.191 $\pm$ 0.001 \\
+Certified, $\alpha{=}.10$, $n{=}400$ & Llama Guard 3 & 400 & 0.098 & 0.42 & 1/5 & \textbf{0.337 $\pm$ 0.005} & 0.330 $\pm$ 0.003 & 0.351 $\pm$ 0.005 & \textcolor{gray}{0.178 $\pm$ 0.003} & \textbf{0.347 $\pm$ 0.004} & 0.197 $\pm$ 0.004 \\
+Stratified certified, $n{=}800$ & Llama Guard 3 & 800 & 0.118 & 0.52 & 2/3 & 0.338 $\pm$ 0.011 & \textbf{0.329 $\pm$ 0.009} & \textbf{0.343 $\pm$ 0.004} & \textcolor{gray}{0.187 $\pm$ 0.008} & 0.388 $\pm$ 0.014 & 0.196 $\pm$ 0.001 \\
+Stratified random, share $0.10$ & -- & 0 & 0.066 & 0.09 & -- & 0.443 $\pm$ 0.013 & 0.416 $\pm$ 0.010 & 0.445 $\pm$ 0.008 & 0.259 $\pm$ 0.003 & 0.523 $\pm$ 0.019 & 0.193 $\pm$ 0.002 \\
+Stratified random, share $0.25$ & -- & 0 & 0.066 & 0.23 & -- & 0.415 $\pm$ 0.012 & 0.395 $\pm$ 0.004 & 0.413 $\pm$ 0.007 & 0.235 $\pm$ 0.001 & 0.477 $\pm$ 0.002 & 0.194 $\pm$ 0.000 \\
+Stratified random, share $0.54$ & -- & 0 & 0.066 & 0.50 & -- & 0.388 $\pm$ 0.012 & 0.379 $\pm$ 0.014 & 0.391 $\pm$ 0.013 & \textbf{0.222 $\pm$ 0.010} & 0.435 $\pm$ 0.008 & 0.191 $\pm$ 0.002 \\
+\bottomrule
+\end{tabular}

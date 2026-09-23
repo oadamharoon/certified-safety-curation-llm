@@ -1,0 +1,29 @@
+\begin{tabular}{lccccccc}
+\toprule
+ & \multicolumn{4}{c}{beaver-dam} & \multicolumn{3}{c}{all three sets} \\
+\cmidrule(lr){2-5}\cmidrule(lr){6-8}
+training set & DirectHarm4 & HarmBench & HEx-PHI & all three & MD-Judge & WildGuard & Llama Guard 3 \\
+\midrule
+No fine-tuning & 0.095 & 0.065 & 0.033 & 0.068 & 0.113 & 0.119 & 0.099 \\
+No filter (SFT) & 0.727 $\pm$ 0.001 & 0.687 $\pm$ 0.007 & 0.694 $\pm$ 0.012 & 0.707 $\pm$ 0.005 & 0.855 $\pm$ 0.004 & 0.916 $\pm$ 0.003 & 0.866 $\pm$ 0.002 \\
+Prompting filter & 0.723 $\pm$ 0.004 & 0.685 $\pm$ 0.003 & 0.720 $\pm$ 0.005 & 0.713 $\pm$ 0.003 & 0.873 $\pm$ 0.001 & 0.926 $\pm$ 0.002 & 0.886 $\pm$ 0.002 \\
+Fixed cutoff, Llama Guard 3 & 0.681 $\pm$ 0.005 & 0.615 $\pm$ 0.010 & 0.521 $\pm$ 0.006 & 0.613 $\pm$ 0.004 & 0.764 $\pm$ 0.007 & 0.816 $\pm$ 0.007 & \textcolor{gray}{0.777 $\pm$ 0.009} \\
+SAFT (validated layer) & 0.498 $\pm$ 0.210 & 0.440 $\pm$ 0.191 & 0.397 $\pm$ 0.187 & 0.451 $\pm$ 0.197 & 0.560 $\pm$ 0.230 & 0.601 $\pm$ 0.245 & 0.566 $\pm$ 0.237 \\
+SAFT (layer 15) & 0.488 $\pm$ 0.209 & 0.427 $\pm$ 0.192 & 0.398 $\pm$ 0.189 & 0.444 $\pm$ 0.197 & 0.562 $\pm$ 0.231 & 0.600 $\pm$ 0.247 & 0.564 $\pm$ 0.240 \\
+SEAL, 3 epochs & 0.732 $\pm$ 0.005 & 0.688 $\pm$ 0.017 & 0.684 $\pm$ 0.004 & 0.707 $\pm$ 0.003 & 0.867 $\pm$ 0.001 & 0.917 $\pm$ 0.001 & 0.878 $\pm$ 0.002 \\
+SEAL, 30 epochs & 0.729 $\pm$ 0.003 & 0.665 $\pm$ 0.005 & 0.679 $\pm$ 0.001 & 0.698 $\pm$ 0.002 & 0.853 $\pm$ 0.000 & 0.907 $\pm$ 0.001 & 0.861 $\pm$ 0.002 \\
+Prompting judge's rejects & 0.714 $\pm$ 0.006 & 0.632 $\pm$ 0.017 & 0.584 $\pm$ 0.012 & 0.653 $\pm$ 0.002 & 0.802 $\pm$ 0.001 & 0.853 $\pm$ 0.003 & 0.809 $\pm$ 0.003 \\
+Random, size of certified & 0.724 $\pm$ 0.013 & 0.643 $\pm$ 0.042 & 0.648 $\pm$ 0.029 & 0.681 $\pm$ 0.024 & 0.834 $\pm$ 0.021 & 0.886 $\pm$ 0.028 & 0.852 $\pm$ 0.021 \\
+Certified, Prompting judge score & 0.731 $\pm$ 0.003 & 0.690 $\pm$ 0.006 & 0.723 $\pm$ 0.003 & 0.719 $\pm$ 0.002 & 0.879 $\pm$ 0.002 & 0.931 $\pm$ 0.002 & 0.894 $\pm$ 0.003 \\
+Certified, SAFT score & 0.702 $\pm$ 0.006 & 0.653 $\pm$ 0.015 & 0.624 $\pm$ 0.004 & 0.665 $\pm$ 0.003 & 0.827 $\pm$ 0.005 & 0.875 $\pm$ 0.000 & 0.834 $\pm$ 0.004 \\
+Certified, SEAL score, 3 epochs & 0.728 $\pm$ 0.008 & 0.690 $\pm$ 0.003 & 0.689 $\pm$ 0.007 & 0.706 $\pm$ 0.006 & 0.861 $\pm$ 0.001 & 0.916 $\pm$ 0.004 & 0.878 $\pm$ 0.002 \\
+Certified, SEAL score, 30 epochs & 0.727 $\pm$ 0.002 & 0.677 $\pm$ 0.004 & 0.674 $\pm$ 0.004 & 0.698 $\pm$ 0.002 & 0.851 $\pm$ 0.001 & 0.901 $\pm$ 0.001 & 0.850 $\pm$ 0.003 \\
+Certified, Llama Guard 3 & 0.560 $\pm$ 0.108 & 0.443 $\pm$ 0.122 & 0.347 $\pm$ 0.114 & 0.463 $\pm$ 0.113 & 0.587 $\pm$ 0.124 & 0.631 $\pm$ 0.130 & \textcolor{gray}{0.601 $\pm$ 0.133} \\
+Stratified certified, Prompting judge score & 0.738 $\pm$ 0.003 & 0.680 $\pm$ 0.003 & 0.728 $\pm$ 0.003 & 0.722 $\pm$ 0.002 & 0.872 $\pm$ 0.001 & 0.930 $\pm$ 0.001 & 0.892 $\pm$ 0.001 \\
+Stratified certified, SAFT score & 0.702 $\pm$ 0.006 & 0.645 $\pm$ 0.010 & 0.591 $\pm$ 0.017 & 0.652 $\pm$ 0.009 & 0.812 $\pm$ 0.009 & 0.861 $\pm$ 0.007 & 0.819 $\pm$ 0.005 \\
+Stratified certified, SEAL score & 0.735 $\pm$ 0.011 & 0.663 $\pm$ 0.020 & 0.680 $\pm$ 0.006 & 0.701 $\pm$ 0.010 & 0.849 $\pm$ 0.006 & 0.895 $\pm$ 0.005 & 0.851 $\pm$ 0.007 \\
+Stratified certified, Llama Guard 3 & 0.659 $\pm$ 0.017 & 0.590 $\pm$ 0.010 & 0.481 $\pm$ 0.008 & 0.584 $\pm$ 0.012 & 0.726 $\pm$ 0.011 & 0.781 $\pm$ 0.011 & \textcolor{gray}{0.754 $\pm$ 0.006} \\
+Labeled-safe only & \textbf{0.323 $\pm$ 0.030} & \textbf{0.170 $\pm$ 0.013} & \textbf{0.107 $\pm$ 0.007} & \textbf{0.217 $\pm$ 0.018} & \textbf{0.328 $\pm$ 0.021} & \textbf{0.357 $\pm$ 0.021} & \textbf{0.327 $\pm$ 0.018} \\
+Oracle, all safe & 0.692 $\pm$ 0.004 & 0.613 $\pm$ 0.013 & 0.546 $\pm$ 0.011 & 0.626 $\pm$ 0.007 & 0.774 $\pm$ 0.004 & 0.829 $\pm$ 0.007 & 0.786 $\pm$ 0.004 \\
+\bottomrule
+\end{tabular}

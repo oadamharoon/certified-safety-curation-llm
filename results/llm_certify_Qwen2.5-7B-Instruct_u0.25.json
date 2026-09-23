@@ -1,0 +1,23 @@
+{
+ "model": "Qwen/Qwen2.5-7B-Instruct",
+ "N": 4000,
+ "pool_unsafe": 0.25,
+ "auc": 0.747997,
+ "alpha0.25": {
+  "cert_rate": 0.98,
+  "false_cert": 0.0,
+  "deployed": true,
+  "mean_q": 0.8499999999999996,
+  "mean_contam": 0.033333333333333326,
+  "mean_size": 600.0
+ },
+ "alpha0.1": {
+  "cert_rate": 0.395,
+  "false_cert": 0.0,
+  "deployed": false,
+  "mean_q": 0.8499999999999998,
+  "mean_contam": 0.03333333333333332,
+  "mean_size": 600.0
+ },
+ "pool_tag": "u0.25"
+}

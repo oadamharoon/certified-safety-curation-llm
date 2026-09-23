@@ -1,0 +1,17 @@
+\begin{tabular}{llccccc}
+\toprule
+pool unsafe & scorer & AUC & \multicolumn{2}{c}{$\alpha=0.25$} & \multicolumn{2}{c}{$\alpha=0.10$} \\
+\cmidrule(lr){4-5}\cmidrule(lr){6-7}
+ & & & cert.\ rate & false cert.\ & cert.\ rate & false cert.\ \\
+\midrule
+0.57 & 1.5B & 0.72 & 0.01 & 0.010 & 0.00 & 0.000 \\
+0.25 & 1.5B & 0.72 & 0.89 & 0.000 & 0.09 & 0.000 \\
+0.10 & 1.5B & 0.72 & 1.00 & 0.000 & 0.47 & 0.000 \\
+0.57 & 7B & 0.74 & 0.24 & 0.000 & 0.00 & 0.000 \\
+0.25 & 7B & 0.75 & 0.98 & 0.000 & 0.40 & 0.000 \\
+0.10 & 7B & 0.72 & 0.99 & 0.000 & 0.61 & 0.000 \\
+0.57 & Llama Guard 3 & 0.84 & 0.14 & 0.020 & 0.01 & 0.010 \\
+0.25 & Llama Guard 3 & 0.85 & 0.97 & 0.000 & 0.15 & 0.000 \\
+0.10 & Llama Guard 3 & 0.83 & 0.99 & 0.000 & 0.32 & 0.000 \\
+\bottomrule
+\end{tabular}

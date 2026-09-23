@@ -1,0 +1,21 @@
+\begin{tabular}{llccccc}
+\toprule
+training set & demo share & beaver-dam & MD-Judge & WildGuard & Llama Guard 3 & XSTest-unsafe \\
+\midrule
+stratified random, no scorer & 0.30 & 0.412 $\pm$ 0.009 & 0.382 $\pm$ 0.006 & 0.430 $\pm$ 0.016 & 0.249 $\pm$ 0.009 & 0.533 $\pm$ 0.006 \\
+stratified random, no scorer & 0.37 & 0.396 $\pm$ 0.009 & 0.363 $\pm$ 0.003 & 0.408 $\pm$ 0.006 & 0.233 $\pm$ 0.006 & 0.522 $\pm$ 0.007 \\
+stratified random, no scorer & 0.45 & 0.390 $\pm$ 0.006 & 0.359 $\pm$ 0.012 & 0.404 $\pm$ 0.012 & 0.227 $\pm$ 0.009 & 0.497 $\pm$ 0.026 \\
+stratified random, no scorer & 0.55 & 0.398 $\pm$ 0.004 & 0.367 $\pm$ 0.003 & 0.398 $\pm$ 0.003 & 0.231 $\pm$ 0.003 & 0.472 $\pm$ 0.004 \\
+\midrule
+harmful examples from the top third by Llama Guard 3 score & 0.37 & 0.363 $\pm$ 0.005 & 0.333 $\pm$ 0.004 & 0.385 $\pm$ 0.010 & \textcolor{gray}{0.210 $\pm$ 0.005} & 0.437 $\pm$ 0.027 \\
+middle third & 0.37 & 0.397 $\pm$ 0.010 & 0.363 $\pm$ 0.006 & 0.407 $\pm$ 0.009 & \textcolor{gray}{0.229 $\pm$ 0.008} & 0.495 $\pm$ 0.008 \\
+bottom third & 0.37 & 0.435 $\pm$ 0.009 & 0.407 $\pm$ 0.009 & 0.453 $\pm$ 0.012 & \textcolor{gray}{0.274 $\pm$ 0.007} & 0.620 $\pm$ 0.012 \\
+\midrule
+top third, safe examples from the top of the within-safe ranking & 0.37 & 0.295 $\pm$ 0.004 & 0.269 $\pm$ 0.005 & 0.315 $\pm$ 0.004 & \textcolor{gray}{0.153 $\pm$ 0.004} & 0.283 $\pm$ 0.007 \\
+top third, safe examples length-matched to the certified set & 0.40 & 0.368 $\pm$ 0.008 & 0.339 $\pm$ 0.007 & 0.384 $\pm$ 0.003 & \textcolor{gray}{0.205 $\pm$ 0.008} & 0.420 $\pm$ 0.024 \\
+\midrule
+certified, Llama Guard 3 (Table~\ref{tab:field}) & 0.37 & 0.295 $\pm$ 0.030 & 0.265 $\pm$ 0.028 & 0.301 $\pm$ 0.032 & \textcolor{gray}{0.151 $\pm$ 0.022} & 0.282 $\pm$ 0.041 \\
+random, pool composition (Table~\ref{tab:field}) & 0.55 & 0.437 $\pm$ 0.007 & 0.411 $\pm$ 0.003 & 0.447 $\pm$ 0.006 & 0.269 $\pm$ 0.004 & 0.628 $\pm$ 0.013 \\
+oracle at the certified set's size (Table~\ref{tab:field}) & 0.54 & 0.316 $\pm$ 0.024 & 0.287 $\pm$ 0.020 & 0.328 $\pm$ 0.024 & 0.173 $\pm$ 0.015 & 0.333 $\pm$ 0.029 \\
+\bottomrule
+\end{tabular}
