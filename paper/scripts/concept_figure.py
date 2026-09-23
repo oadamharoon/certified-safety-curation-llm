@@ -18,14 +18,14 @@ import matplotlib.pyplot as plt
 from matplotlib.patches import FancyBboxPatch, FancyArrowPatch
 
 W = (os.environ.get("CDC_ROOT") or os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))); BASE = f"{W}/paper"
-sys.path.insert(0, f"{W}/scripts"); from common import build_pool, load_split  # noqa: E402
+sys.path.insert(0, f"{W}/scripts"); from common import main_pool  # noqa: E402
 BLUE, ORANGE, GREEN, PURPLE, GREY, INK = "#0072B2", "#D55E00", "#009E73", "#8064a2", "#5f5f5f", "#2b2b2b"
 F = 1.3   # uniform text scale
 SKIP = ("lick", "cock", "explicit")   # printable-content filter for the example cards
 
 
 def main():
-    pool = build_pool(load_split("train"), 4000, 0.25, 0); unsafe = np.array([not r["is_safe"] for r in pool])
+    pool = main_pool(); unsafe = np.array([not r["is_safe"] for r in pool])
     wg = json.load(open(f"{W}/results/scores_wildguard_pool.json")); req = np.array(wg["harmful_request"]); ref = np.array(wg["refusal"])
     g = np.array(json.load(open(f"{W}/results/scores_Qwen2.5-7B-Instruct_N4000_u0.25.json")))
     short = np.array([len(r["prompt"]) <= 90 and len(r["response"]) <= 170 and not any(k in (r["prompt"] + r["response"]).lower() for k in SKIP) for r in pool])

@@ -31,7 +31,14 @@ out = {}
 # ---- 0.5B
 ev = json.load(open(f"{W}/results/eval_sets.json"))["gen_prompts"]
 ARMS05 = (("full", "no filter"), ("heur", "fixed cutoff, judge"), ("anti_qwen", "judge's rejects"), ("cert400", "certified, judge"), ("random1400", "random, size of certified"), ("lgfilter", "fixed cutoff, Llama Guard 3"), ("certlg400", "certified, Llama Guard 3"), ("certstrat2_lg800", "stratified certified"), ("certstrat2_qwen800", "stratified certified, judge"), ("saft05", "SAFT"), ("certsaft05", "certified, SAFT score"), ("certstrat_saft05", "stratified certified, SAFT score"), ("labels", "labeled only"), ("oracle", "oracle"))
-gens = {a: json.load(open(f"{W}/results/gen/{a}_s0.json")) for a, _ in ARMS05}
+# The raw generation files are not distributed; the rows this table shows are cached beside the
+# results, written from the generations when they are present and read back when they are not.
+_cache = f"{W}/results/qualitative_rows.json"
+if all(os.path.exists(f"{W}/results/gen/{a}_s0.json") for a, _ in ARMS05):
+    gens = {a: json.load(open(f"{W}/results/gen/{a}_s0.json")) for a, _ in ARMS05}
+    json.dump(gens, open(_cache, "w"))
+else:
+    gens = json.load(open(_cache))
 bd = json.load(open(f"{W}/results/gen_scores/beaverdam.json")); md = json.load(open(f"{W}/results/gen_scores/mdjudge.json"))
 wgp = json.load(open(f"{W}/results/gen_scores/wildguard.json"))
 def flagged(model, i): return bd[model][i] > 0.5, bool(md[model]["flag"][i])
