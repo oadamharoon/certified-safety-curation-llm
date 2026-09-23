@@ -65,7 +65,9 @@ main, app = (tex[:tex.index("\\appendix")], tex[tex.index("\\appendix"):]) if HA
 if not HAVE_TEX: print("  SKIP  paper/paper.tex is not in this archive")
 for title, lab in re.findall(r"\\section\{([^}]*)\}\s*\\label\{(app:[^}]*)\}", app): check(f"\\ref{{{lab}}}" in main, f"appendix '{title}' referenced")
 print("R5 pre-registration outcomes")
-rd = open(f"{W}/PREREGISTRATION.md").read(); secs = re.split(r"\n## ", rd)
+HAVE_PREREG = os.path.exists(f"{W}/PREREGISTRATION.md")
+if not HAVE_PREREG: print("  SKIP  PREREGISTRATION.md is kept outside the repository")
+rd = open(f"{W}/PREREGISTRATION.md").read() if HAVE_PREREG else ""; secs = re.split(r"\n## ", rd)
 for sec in secs[1:]:
     head = sec.split("\n")[0]
     if re.match(r"(E\d+|Step|SAFT|Anti|OUTCOMES|SEAL)", head) and "Queue" not in head:
@@ -75,7 +77,9 @@ for sec in secs[1:]:
         if "pre-registered" in head.lower(): check(re.search(r"\bOUTCOME", sec) is not None, f"pre-registration section '{head[:60]}' has an OUTCOME"); continue
         body = sec.lower(); check(any(k in body for k in ("outcome", "result", "held", "failed")), f"pre-registration section '{head[:60]}' has an outcome")
 print("R6 claims ledger")
-for line in open(f"{W}/CLAIMS.md"):
+HAVE_CLAIMS = os.path.exists(f"{W}/CLAIMS.md")
+if not HAVE_CLAIMS: print("  SKIP  CLAIMS.md is kept outside the repository")
+for line in (open(f"{W}/CLAIMS.md") if HAVE_CLAIMS else []):
     if line.startswith("| C"):
         cid = line.split("|")[1].strip(); status = line.split("|")[4].strip(); check(status.startswith(("ESTABLISHED", "RESOLVED")), f"{cid}: {status[:50]}")
 print("R8 every scorer through the gate and label-complexity sweep")
