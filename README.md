@@ -62,9 +62,9 @@ the matplotlib version; see `requirements.txt`.
     python paper/scripts/completeness_check.py
 
 This is the gate. It checks that the experiment matrix is complete (every condition, every seed,
-every judge), then runs `audit_prose.py` over every number in the paper's prose and
-`verify_constants.py` over every number that is not a table cell, each bound to the one expression
-that produces it. It also checks that each table's caption declares the markings that table uses.
+every judge) and runs `verify_constants.py`, which binds every number in the paper that is not a
+table cell to the one expression that produces it. Two further rules read the paper's LaTeX source,
+which is not part of this repository; they announce a skip and the rest of the gate still runs.
 
 ## Rerunning the experiments
 

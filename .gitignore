@@ -45,3 +45,9 @@ EXPERIMENT_MATRIX.md
 FIGURES.md
 PREREGISTRATION.md
 CLAIMS.md
+
+# The LaTeX paper is not part of the codebase.
+paper/*.tex
+paper/*.bib
+paper/*.sty
+paper/*.bst
