@@ -54,8 +54,14 @@ for a, lab in ARMS05:
 box("qualitative_05b", ev[pick], rows, ""); out["0.5B"] = {"index": pick, "prompt": ev[pick]}
 # ---- 8B
 ARMS8 = (("full", "no filter"), ("prompting", "Prompting filter"), ("lgfilter", "fixed cutoff, Llama Guard 3"), ("labels", "labeled only"), ("saft", "SAFT"), ("seal", "SEAL"), ("anti", "judge's rejects"), ("random", "random"), ("certprompt", "certified, Prompting judge"), ("certstrat_prompt", "stratified certified, Prompting judge"), ("certlg", "certified, Llama Guard 3"), ("certsaft", "certified, SAFT score"), ("certseal", "certified, SEAL score"), ("certstrat_saft", "stratified certified, SAFT score"), ("certstrat_seal", "stratified certified, SEAL score"), ("certstrat2", "stratified certified"), ("oracle", "oracle"))
-ARMS8 = tuple(x for x in ARMS8 if os.path.exists(f"{W}/results/gen_e3/lambda0.25/{x[0]}_s0.json"))   # arms still in the queue (E16) appear once run
-G = {a: json.load(open(f"{W}/results/gen_e3/lambda0.25/{a}_s0.json"))["held"] for a, _ in ARMS8}
+_cache8 = f"{W}/results/qualitative_rows_8b.json"
+if os.path.exists(f"{W}/results/gen_e3/lambda0.25/full_s0.json"):
+    ARMS8 = tuple(x for x in ARMS8 if os.path.exists(f"{W}/results/gen_e3/lambda0.25/{x[0]}_s0.json"))
+    G = {a: json.load(open(f"{W}/results/gen_e3/lambda0.25/{a}_s0.json"))["held"] for a, _ in ARMS8}
+    json.dump(G, open(_cache8, "w"))
+else:
+    G = json.load(open(_cache8))
+    ARMS8 = tuple(x for x in ARMS8 if x[0] in G)
 S = json.load(open(f"{W}/results/e3_scores_lambda0.25.json"))
 def flagged8(model, i): return S["beaverdam"][model][i] > 0.5, bool(S["mdjudge"][model][i]["flag"][i] if isinstance(S["mdjudge"][model], dict) else S["mdjudge"][model][i])
 def flagged8(model, i): return S["beaverdam"][model]["score"][i] > 0.5, bool(S["mdjudge"][model]["flag"][i])

@@ -197,7 +197,7 @@ def saft_kde_figure():
         scores = [_score(Z["layer15"]), _score(Z["layer32"]), _score(Z05)]
         json.dump([s.tolist() for s in scores], open(cache, "w"))
     else:
-        scores = [np.array(s) for s in json.load(open(cache))]
+        scores = [np.array(s, dtype=np.float32) for s in json.load(open(cache))]   # as computed
     panels = [("8B, layer 15", scores[0], unsafe, req), ("8B, layer 32", scores[1], unsafe, req), ("0.5B, layer 12", scores[2], unsafe05, req05)]
     fig, ax = plt.subplots(1, 3, figsize=(6.4, 2.1), sharey=False)
     for a, (title, sc, uns, rq) in zip(ax, panels):
