@@ -125,6 +125,11 @@ CHECKS = [
     ("App D: BeaverTails category mix of the 500 evaluation prompts", [121, 115, 62, 51],
      [cats["n_prompts"]["violence,aiding_and_abetting,incitement"], cats["n_prompts"]["non_violent_unethical_behavior"],
       cats["n_prompts"]["discrimination,stereotype,injustice"], cats["n_prompts"]["hate_speech,offensive_language"]], 0),
+    # the clause that justifies drawing HEx-PHI as a radar and BeaverTails as a heatmap:
+    # equal angular sectors are honest only where the categories are equally sized
+    ("App D: the plotted BeaverTails categories run 10 to 121 prompts", (10, 121),
+     (min(v for v in cats["n_prompts"].values() if v >= 10),
+      max(cats["n_prompts"].values())), 0),
     ("Sec 9/App I: benchmark transfer Spearman 0.97 to 0.99 per judge", (0.97, 0.99),
      (tr["8b"]["pooled_min"], tr["8b"]["pooled_max"]), 0.006),
     ("App I: two of twelve (judge, set) pairs fall below 0.9, at 0.886 and 0.891", 2, tr["8b"]["clean_judges_below_0.9"], 0),
