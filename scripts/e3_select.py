@@ -9,7 +9,7 @@ for strata. Arms per seed s in {0,1,2}:
   certlg      certified, Llama Guard scorer, alpha .10, n 400 (fallback if refused)
   certstrat2  stratified certificate, alpha_h .20 / alpha_b .15, n 800, Llama Guard scorer
   oracle      all human-safe examples
-Runs in the safevlmcpl env (judges). Writes selections_e3/lambda{LAMBDA}/*.json.
+Runs the judges under PY. Writes selections_e3/lambda{LAMBDA}/*.json.
 """
 import json, os, sys
 import numpy as np, torch

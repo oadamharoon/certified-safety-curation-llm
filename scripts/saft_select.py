@@ -16,7 +16,7 @@ criterion. Arms written to selections_e3/lambda{L}/:
   saft_s{s}      same, with the layer in {15, 32} validated on the same 100 labels
   certsaft_s{s}  our certificate on the SAFT score (-s_i as the safety score), alpha .10,
                  n 400, the same calibration draws as certlg
-Runs in the certcurate-llm env. Usage: LAMBDA=0.25 python saft_select.py
+Runs in the the PY_LLM interpreter. Usage: LAMBDA=0.25 python saft_select.py
 """
 import json, os, sys
 import numpy as np, torch

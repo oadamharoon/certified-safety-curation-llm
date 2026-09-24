@@ -5,7 +5,7 @@ excluded, since PKU-SafeRLHF and BeaverTails share prompt sources). Scorers: Qwe
 judge (log-odds), Llama Guard 3, WildGuard prompt label for strata. Arms per seed s in {0,1,2}:
 p2_full, p2_random (size of p2_cert400), p2_cert400 (judge, alpha .10, n 400), p2_certlg400,
 p2_certstrat2 (LG, .20/.15, n 800), p2_oracle. Selections in selections/p2_*.json (indices into
-results/pool2.json); metadata appended to results/step2_selections.json. safevlmcpl env."""
+results/pool2.json); metadata appended to results/step2_selections.json. Runs under PY."""
 import json, os, sys, hashlib
 import numpy as np
 sys.path.insert(0, os.path.dirname(__file__)); from common import *

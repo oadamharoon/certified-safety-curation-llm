@@ -2,7 +2,7 @@
 23:00, README). Every scorer at each scale should carry a fixed cutoff, the pooled certificate and
 the stratified certificate at the attainable targets (.20/.15, n 800). Missing were the stratified
 certificate on the Prompting judge score at 8B (certstrat_prompt) and on SAFT's score at 0.5B
-(certstrat_saft05). Selections only; the runners fine-tune and evaluate. certcurate-llm env."""
+(certstrat_saft05). Selections only; the runners fine-tune and evaluate. the PY_LLM interpreter."""
 import json, os, sys
 import numpy as np
 sys.path.insert(0, os.path.dirname(__file__)); from common import W, build_pool, load_split, ltt_walk, cp_fallback

@@ -1,7 +1,7 @@
 #!/bin/bash
 # waits for the pool-refusal job (last GPU user in the chain), then runs the two controls
 PY="${PY:-python}"
-until grep -q "POOLREF DONE" /tmp/claude-1001/-home-omniverse-workspace-safevlmcpl/cbe3ff25-bd02-4cf4-9f36-173bf5fa270c/tasks/bj8o8ifpd.output 2>/dev/null; do sleep 30; done
+# Run this after e1_pool_refusal.py: both want the GPU to itself.
 W="${CDC_ROOT:-$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)}"; PY=${PY}; cd $W
 for s in 0 1 2; do env PYTHONNOUSERSITE=1 ARM=random1400 SEED=$s $PY scripts/step2_sft.py > logs/sft/random1400_s$s.log 2>&1 && echo "done random1400 s$s" || echo "FAIL random1400 s$s"; done
 # base reference: symlink the base checkpoint into results/models so every eval script treats it as an arm

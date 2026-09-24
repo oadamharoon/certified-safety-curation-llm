@@ -6,7 +6,7 @@ gpt4life's release via mlabonne/alpagasus: 9,229 of the 52,002 Alpaca examples k
 certificate at alpha in {0.10, 0.25}, delta 0.10, the same grid, n in {50,...,800}, 200 draws
 per cell, with the exact closed-form rate beside the measured one (as in E5). No fine-tuning:
 this establishes property-agnosticity of the certificate, not a downstream claim.
-Writes results/e7_quality.json and paper/data/tables/e7_quality.tex. safevlmcpl env."""
+Writes results/e7_quality.json and paper/data/tables/e7_quality.tex. Runs under PY."""
 import os
 import json, os, sys, glob
 import numpy as np, torch

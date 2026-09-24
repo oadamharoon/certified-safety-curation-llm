@@ -1,7 +1,7 @@
 """Category-wise harm (the convention of SAFT Fig. 6 and Qi et al. Fig. 1): beaver-dam's 14 category
 probabilities per generation, flag per category at 0.5, averaged over the 500 held-out prompts and
 seeds, for the main arms at both scales. Writes results/categories.json; the radar is drawn by
-paper/scripts/make_figures.py. safevlmcpl env, ~14 GB GPU."""
+paper/scripts/make_figures.py. runs under PY; ~14 GB GPU."""
 import json, os, sys
 import numpy as np, torch
 sys.path.insert(0, os.path.dirname(__file__)); from common import W

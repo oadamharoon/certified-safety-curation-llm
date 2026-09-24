@@ -5,7 +5,7 @@ certstrat_seal = the stratified certificate (alpha_h .20 / alpha_b .15, n 800) o
 (validated layer/k of seed s) and on the SEAL selector logit (budget-matched selector when present).
 0.5B (selections/): saft05 = SAFT reimplemented with Qwen2.5-0.5B embeddings (layer 12 of 24, k and
 tau by F1 on 100 labels, as at 8B) on the step-2 pool; certsaft05 = its score under our certificate.
-Run in certcurate-llm env (0.5B embeddings on GPU, ~2 GB)."""
+Run in the PY_LLM interpreter (0.5B embeddings on GPU, ~2 GB)."""
 import json, os, sys
 import numpy as np, torch
 sys.path.insert(0, os.path.dirname(__file__)); from common import W, ltt_walk, cp_fallback, build_pool, load_split

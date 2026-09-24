@@ -1,4 +1,4 @@
-"""Prose-number audit for the LLM paper, the port of iclr2027/scripts/audit_prose_numbers.py.
+"""Prose-number audit for the LLM paper.
 
 1. ARM-SCOPED EXISTENCE. Every decimal (and 2-5 digit integer) in a prose sentence that names an arm
    must be a value of that arm at the stated precision, where an arm's values are: its rows in every

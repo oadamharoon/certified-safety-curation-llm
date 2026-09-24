@@ -1,6 +1,6 @@
-"""E3 evaluation. Phase 'gen' (certcurate-llm env): load base + LoRA adapter, greedy-generate on
+"""E3 evaluation. Phase 'gen' (PY_LLM): load base + LoRA adapter, greedy-generate on
 the 500 held-out prompts and the 450 XSTest prompts, save results/gen_e3/lambda{L}/{arm}_s{s}.json.
-Also generates for the base Instruct model once (arm 'base'). Phase 'judge' (safevlmcpl env):
+Also generates for the base Instruct model once (arm 'base'). Phase 'judge' (PY):
 beaver-dam, MD-Judge, WildGuard, Llama Guard 3 on the held-out generations, WildGuard on XSTest,
 ROUGE-L vs safe references; writes results/e3_eval_lambda{L}.json and prints the table.
 """

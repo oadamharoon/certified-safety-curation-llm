@@ -3,7 +3,7 @@
 Qwen judges. Scores the 0.10 and natural pools with Llama Guard 3 (the 0.25 pool's scores exist
 from E2), then runs E5's sweep (200 draws, n grid, alpha .10/.25, closed form) for the LG scorer and
 appends to results/e5_label_complexity.json under keys '<pool>|LG|a<alpha>'; writes the gate
-row (n = 200) into results/llm_certify_LlamaGuard3_<pool>.json in step 1's format. safevlmcpl env."""
+row (n = 200) into results/llm_certify_LlamaGuard3_<pool>.json in step 1's format. Runs under PY."""
 import os
 import json, os, sys
 import numpy as np

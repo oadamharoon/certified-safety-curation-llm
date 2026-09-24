@@ -6,7 +6,7 @@ order and SFTDatasetIndexed returns the dataset position, so index i is pool row
   certseal_s{s}  the selector logit as a safety score under our certificate, alpha .10, n 400,
                  same calibration draws as certlg/certsaft.
 Diagnostics: AUROC of the logit against the human label, safety-demo share of the kept set.
-CPU only; safevlmcpl env. Usage: LAMBDA=0.25 python seal_select.py
+CPU only; Runs under PY. Usage: LAMBDA=0.25 python seal_select.py
 """
 import json, os, sys
 import numpy as np, torch

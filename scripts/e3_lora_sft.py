@@ -4,7 +4,7 @@ Model: meta-llama/Llama-3.1-8B-Instruct (aligned). LoRA r=8, alpha=16, dropout 0
 q/k/v/o/gate/up/down (DataShield's target set; SAFT's appendix config not available to us,
 stated as an assumption). 4 epochs, lr 2e-5, effective batch 16, max length 512, bf16,
 loss on assistant tokens under the model's own chat template. Identical for every arm.
-Runs in the certcurate-llm env (peft). Usage: ARM=<arm> SEED=<s> LAMBDA=0.25 python e3_lora_sft.py
+Runs in the the PY_LLM interpreter (peft). Usage: ARM=<arm> SEED=<s> LAMBDA=0.25 python e3_lora_sft.py
 Pools live in selections_e3/lambda{LAMBDA}/{ARM}_s{SEED}.json (built by e3_select.py); models
 save to results/models_e3/lambda{LAMBDA}/{ARM}_s{SEED}/ (adapter only).
 """

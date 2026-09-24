@@ -6,9 +6,9 @@ HEx-PHI (public release: 300 prompts, ten of its eleven categories x 30; categor
 its authors; data/hf/HEx-PHI/category_*.csv, gated, access granted 2026-09-16).
 Generation exactly as on the BeaverTails prompts (chat template, greedy, 200 new tokens), the
 same four judges, the flag rate per set and per prompt category. Phases:
-  gen05  (safevlmcpl env)      0.5B models in results/models/<arm>_s<k>
-  gen8   (certcurate-llm env)  Llama-3.1-8B-Instruct + LoRA adapters in results/models_e3/lambda0.25
-  judge  (safevlmcpl env)      four judges over every cached generation
+  gen05  (PY)      0.5B models in results/models/<arm>_s<k>
+  gen8   (PY_LLM)  Llama-3.1-8B-Instruct + LoRA adapters in results/models_e3/lambda0.25
+  judge  (PY)      four judges over every cached generation
 Caches: results/gen_harmsets/{05b,8b}/<model>.json; scores results/harmsets_scores.json;
 summary results/harmsets.json. Arms: the ones of the category figure plus the base model.
 """

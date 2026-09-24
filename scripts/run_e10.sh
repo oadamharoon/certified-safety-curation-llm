@@ -1,6 +1,6 @@
 #!/bin/bash
 PY="${PY:-python}"
-until grep -q "E9 DONE" /tmp/claude-1001/-home-omniverse-workspace-safevlmcpl/cbe3ff25-bd02-4cf4-9f36-173bf5fa270c/tasks/b1dt40m5x.output 2>/dev/null; do sleep 30; done
+# Run this after e9 (the decile sweep): both want the GPU to itself.
 set -u; W="${CDC_ROOT:-$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)}"; PY=${PY}; cd $W
 env PYTHONNOUSERSITE=1 $PY scripts/e10_two_property.py 2>&1 | grep -v -i warn | tee logs/e10_select.log
 names=""
